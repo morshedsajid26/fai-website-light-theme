@@ -16,6 +16,7 @@ import {
   FaFacebook,
   FaYoutube,
 } from "react-icons/fa";
+import Header from "../Header";
 
 const servicesData = [
   {
@@ -343,7 +344,7 @@ const AnimatedLines = ({ containerRef, nodes }) => {
               stroke="#ffffff"
               strokeWidth="4"
               filter="url(#glow-intense)"
-              strokeDasharray="60 2000"
+              strokeDasharray="60 500"
               animate={{ strokeDashoffset: [2000, -2000] }}
               transition={{
                 duration: slowDuration,
@@ -356,7 +357,7 @@ const AnimatedLines = ({ containerRef, nodes }) => {
             <circle
               cx={p.sx}
               cy={p.sy}
-              r="5"
+              r="0"
               fill="#ffffff"
               stroke="#ff4e27"
               strokeWidth="2.5"
@@ -367,7 +368,7 @@ const AnimatedLines = ({ containerRef, nodes }) => {
             <circle
               cx={p.tx}
               cy={p.ty}
-              r="5"
+              r="0"
               fill="#ffffff"
               stroke="#ff4e27"
               strokeWidth="2.5"
@@ -415,28 +416,15 @@ const WhatWeDo = () => {
 
       <Container className="relative z-10">
         {/* Header Section */}
-        <div className="text-center max-w-4xl mx-auto mb-40 relative z-20">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-[#FF4E27]">✦</span>
-            <span className="text-[#FF4E27] font-semibold tracking-widest uppercase text-xs md:text-sm">
-              WHAT WE CAN DO
-            </span>
-            <span className="text-[#FF4E27]">✦</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-[52px] font-space-grotesk font-bold text-[#09090b] leading-[1.2] mb-6">
-            Powerful Solutions,{" "}
-            <span className="text-[#FF4E27]">Real Impact</span>
-          </h2>
-          <p className="text-zinc-500 text-sm md:text-base font-poppins max-w-xl mx-auto">
-            From AI automation to digital marketing, we help businesses grow
-            with smart, scalable, and result-driven solutions.
-          </p>
-        </div>
+      <Header
+      titleText={`What We Do?`}
+      subtitleText={`Transforming ideas into intelligent digital experiences`}
+      />
 
         {/* Network Grid Section */}
         <div
           ref={containerRef}
-          className="relative w-full max-w-[1300px] mx-auto px-2 md:px-4"
+          className="relative w-full max-w-[1300px] mx-auto px-2 md:px-4 mt-40"
         >
           <div className="hidden lg:block">
             <AnimatedLines containerRef={containerRef} nodes={nodes} />
@@ -512,13 +500,11 @@ const WhatWeDo = () => {
               }
 
               return (
-                <div 
-                  key={item.id} 
+                <div
+                  key={item.id}
                   className={`w-full h-full ${
                     item.id === "02" ? "lg:-translate-y-20" : ""
-                  } ${
-                    item.id === "09" ? "lg:translate-y-20" : ""
-                  }`}
+                  } ${item.id === "09" ? "lg:translate-y-20" : ""}`}
                 >
                   <motion.div
                     ref={(el) => measureNode(item.id, el)}
@@ -527,39 +513,39 @@ const WhatWeDo = () => {
                     viewport={{ once: true, amount: 0.2 }}
                     className="bg-white rounded-[24px] lg:rounded-[32px] p-4 pr-5 shadow-[0_8px_30px_rgba(255,78,39,0.06)] border border-[#ff4e27]/5 flex items-center gap-4 hover:-shadow-lg transition-all duration-300 relative group z-10 w-full hover:-translate-y-2"
                   >
-                  {/* Icon Container with specific squircle/rounded box style */}
-                  <div className="w-[84px] h-[84px] flex-shrink-0 rounded-[20px] bg-gradient-to-br from-[#fff4f0] to-[#ffe8e0] flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)] border border-white group-hover:scale-110 transition-transform duration-300">
-                    {item.Icon && (
-                      <item.Icon
-                        size={38}
-                        className="drop-shadow-sm"
-                        style={{ color: item.color }}
-                      />
-                    )}
-                  </div>
-
-                  {/* Text Content */}
-                  <div className="flex-1 py-1">
-                    <div className="text-[#ff4e27] font-bold text-sm mb-1 leading-none">
-                      {item.id}
+                    {/* Icon Container with specific squircle/rounded box style */}
+                    <div className="w-[84px] h-[84px] flex-shrink-0 rounded-[20px] bg-gradient-to-br from-[#fff4f0] to-[#ffe8e0] flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)] border border-white group-hover:scale-110 transition-transform duration-300">
+                      {item.Icon && (
+                        <item.Icon
+                          size={38}
+                          className="drop-shadow-sm"
+                          style={{ color: item.color }}
+                        />
+                      )}
                     </div>
-                    <h4 className="text-[17px] font-bold text-[#09090b] mb-1.5 font-space-grotesk leading-tight tracking-tight">
-                      {item.title}
-                    </h4>
-                    <p className="text-[#6b7280] text-[12.5px] leading-snug pr-2">
-                      {item.desc}
-                    </p>
-                  </div>
 
-                  {/* Right Arrow - Circular outline */}
-                  <div className="w-[30px] h-[30px] rounded-full border-[1.5px] border-[#ff4e27] flex items-center justify-center text-[#ff4e27] flex-shrink-0 group-hover:bg-[#ff4e27] group-hover:text-white transition-colors duration-300 cursor-pointer shadow-sm">
-                    <FaArrowRight size={10} />
-                  </div>
-                </motion.div>
-              </div>
-            );
-          })}
-        </div>
+                    {/* Text Content */}
+                    <div className="flex-1 py-1">
+                      <div className="text-[#ff4e27] font-bold text-sm mb-1 leading-none">
+                        {item.id}
+                      </div>
+                      <h4 className="text-[17px] font-bold text-[#09090b] mb-1.5 font-space-grotesk leading-tight tracking-tight">
+                        {item.title}
+                      </h4>
+                      <p className="text-[#6b7280] text-[12.5px] leading-snug pr-2">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    {/* Right Arrow - Circular outline */}
+                    <div className="w-[30px] h-[30px] rounded-full border-[1.5px] border-[#ff4e27] flex items-center justify-center text-[#ff4e27] flex-shrink-0 group-hover:bg-[#ff4e27] group-hover:text-white transition-colors duration-300 cursor-pointer shadow-sm">
+                      <FaArrowRight size={10} />
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </Container>
     </div>
