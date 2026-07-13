@@ -21,7 +21,7 @@ const Navbar = ({ className }) => {
 
   return (
     <Container
-      className={`bg-white/80 backdrop-blur-md shadow-sm border border-zinc-200/50 p-2 rounded-2xl w-full fixed top-4 left-1/2 -translate-x-1/2  z-50 ${className}`}
+      className={`bg-white/40 backdrop-blur-md shadow-sm border border-zinc-200/50 p-2 rounded-2xl w-full fixed top-4 left-1/2 -translate-x-1/2  z-50 ${className}`}
     >
       <nav className="">
         <motion.div
