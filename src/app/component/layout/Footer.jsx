@@ -209,7 +209,7 @@ const Footer = () => {
                         className="flex items-center gap-1 hover:text-[#F8A024] transition-colors"
                       >
                         <IoIosArrowForward size={16} />
-                        Software Development
+                        App Development
                       </a>
                     </li>
                     <li>
@@ -218,7 +218,7 @@ const Footer = () => {
                         className="flex items-center gap-1 hover:text-[#F8A024] transition-colors"
                       >
                         <IoIosArrowForward size={16} />
-                        AI Programer
+                        AI Automation
                       </a>
                     </li>
                     <li>
@@ -227,7 +227,7 @@ const Footer = () => {
                         className="flex items-center gap-1 hover:text-[#F8A024] transition-colors"
                       >
                         <IoIosArrowForward size={16} />
-                        System Application
+                        Web Development
                       </a>
                     </li>
                     <li>
@@ -236,7 +236,16 @@ const Footer = () => {
                         className="flex items-center gap-1 hover:text-[#F8A024] transition-colors"
                       >
                         <IoIosArrowForward size={16} />
-                        Network Solution
+                        UI/UX Design
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="flex items-center gap-1 hover:text-[#F8A024] transition-colors"
+                      >
+                        <IoIosArrowForward size={16} />
+                        CMS
                       </a>
                     </li>
                   </ul>
