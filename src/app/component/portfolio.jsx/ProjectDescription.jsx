@@ -41,28 +41,9 @@ export default async function ProjectDetails(props) {
             <span>Back to Projects</span>
           </Link>
 
-          {/* Header */}
-          <motion.div
-            className="mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <span className="inline-block px-5 py-2 rounded-full bg-zinc-100 border border-[#FF4400]/20 text-sm font-semibold text-[#FF4400] mb-6">
-              {project.category}
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-space-grotesk tracking-tight mb-6">
-              {project.title}
-            </h1>
-            <p className="text-xl text-zinc-600 max-w-3xl leading-relaxed">
-              {project.description}
-            </p>
-          </motion.div>
-
           {/* Feature Image Layout */}
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 mb-16"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 mb-12"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -100,6 +81,22 @@ export default async function ProjectDetails(props) {
             </div>
           </motion.div>
 
+          {/* Header */}
+          <motion.div
+            className="mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            <span className="inline-block px-5 py-2 rounded-full bg-zinc-100 border border-[#FF4400]/20 text-sm font-semibold text-[#FF4400] mb-6">
+              {project.category}
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-space-grotesk tracking-tight mb-6">
+              {project.title}
+            </h1>
+          </motion.div>
+
           {/* Details Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Main Description */}
@@ -110,21 +107,8 @@ export default async function ProjectDetails(props) {
               transition={{ duration: 0.8 }}
               viewport={{ once: false, amount: 0.2 }}
             >
-              <h2 className="text-3xl font-bold font-space-grotesk">
-                Project Overview
-              </h2>
               <p className="text-zinc-600 leading-relaxed text-lg">
-                This is a dynamic project details view. The {project.title} was
-                built to solve critical infrastructure problems and provide a
-                seamless user experience. Below, you will find additional
-                documentation covering project architecture and deployment
-                details.
-              </p>
-              <p className="text-zinc-600 leading-relaxed text-lg">
-                Our team focused heavily on ensuring scalability, security, and
-                beautiful interfaces. From rigorous testing pipelines to
-                high-fidelity Figma designs, every step was optimized to deliver
-                top-tier results for the client.
+                {project.description}
               </p>
             </motion.div>
 

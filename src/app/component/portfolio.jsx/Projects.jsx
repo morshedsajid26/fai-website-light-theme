@@ -9,20 +9,28 @@ import { projectsData } from "../../data/projectsData";
 
 const categories = [
   { id: "all", label: "All Project", icon: LuGlobe },
-  { id: "ai", label: "AI & Automation", icon: LuGlobe },
-  { id: "web", label: "Website Development", icon: LuGlobe },
-  { id: "mobile", label: "Mobile App", icon: LuSmartphone },
-  { id: "ui", label: "UI/UX Design", icon: LuPalette },
+  { id: "ai-mobile", label: "AI Powered Mobile APP", icon: LuSmartphone },
+  { id: "custom-web", label: "Custom Website Development", icon: LuGlobe },
+  { id: "ai-agent", label: "AI Agent / Automation / AI Powered Website", icon: LuGlobe },
+  { id: "cms", label: "CMS", icon: LuPalette },
 ];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All Project");
+  const [visibleCount, setVisibleCount] = useState(12);
+
+  const handleCategoryChange = (label) => {
+    setActiveCategory(label);
+    setVisibleCount(12); // Reset visible count on category change
+  };
 
   // Filter projects based on selected category
   const filteredProjects =
     activeCategory === "All Project"
       ? projectsData
       : projectsData.filter((project) => project.category === activeCategory);
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   return (
     <section className="py-20">
@@ -35,7 +43,7 @@ const Projects = () => {
             return (
               <button
                 key={cat.id}
-                onClick={() => setActiveCategory(cat.label)}
+                onClick={() => handleCategoryChange(cat.label)}
                 className={`flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm md:text-base font-medium transition-colors duration-300 flex-1 min-w-max font-poppins ${
                   isActive
                     ? "bg-gradient-to-r from-[#E53022] to-[#F8A024] text-white shadow-lg"
@@ -52,7 +60,7 @@ const Projects = () => {
         {/* Projects Grid with Framer Motion filtering */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {visibleProjects.map((project) => (
               <motion.div
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -102,6 +110,18 @@ const Projects = () => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* View More Button */}
+        {visibleCount < filteredProjects.length && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setVisibleCount(filteredProjects.length)}
+              className="bg-gradient-to-r from-[#E53022] to-[#F8A024] text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+            >
+              View More Projects
+            </button>
+          </div>
+        )}
       </Container>
     </section>
   );

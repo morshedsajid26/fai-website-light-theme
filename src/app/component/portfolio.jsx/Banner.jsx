@@ -16,13 +16,11 @@ const Banner = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}
         >
-          <h3 className="text-5xl font-space-grotesk font-bold text-[#09090b] leading-tight">
-            Transforming Ideas into Intelligent Realities.
+          <h3 className="text-4xl md:text-5xl font-space-grotesk font-bold text-[#09090b] leading-tight px-4 max-w-5xl text-center">
+            Powering Digital Innovation Across Industries
           </h3>
-          <p className="text-[#09090b] font-poppins text-xl mt-3 max-w-2xl">
-            Explore how <span className="text-[#E53022]">Fire AI</span> helps
-            businesses scale faster with next-gen AI, apps, and digital
-            experiences.
+          <p className="text-[#09090b] font-poppins text-lg md:text-xl mt-3 max-w-3xl px-4 text-center">
+            Discover how <span className="text-[#E53022]">Fire AI</span> partners with ambitious startups and growing businesses to build AI-powered solutions, modern applications, and high-performing digital experiences that deliver measurable results.
           </p>
         </motion.div>
       </div>
