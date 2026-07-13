@@ -36,7 +36,7 @@ const Projects = () => {
     <section className="py-20">
       <Container>
         {/* Filter Tabs Container */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-center justify-between gap-2 bg-zinc-100/50 border border-zinc-200 p-2 rounded-2xl mb-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="flex flex-nowrap md:flex-wrap items-center justify-start md:justify-center gap-2 bg-zinc-100/50 border border-zinc-200 p-2 rounded-2xl mb-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeCategory === cat.label;
