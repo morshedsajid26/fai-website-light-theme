@@ -14,44 +14,44 @@ import { motion } from "framer-motion";
 
 const reasons = [
   {
-    title: "Real AI Products",
+    title: "Work on Real Projects",
     description:
-      "We don't just build demos. We ship scalable, production-ready AI solutions used by thousands.",
+      "Build AI solutions, web applications, mobile apps, CMS platforms, and automation systems used by real businesses.",
     icon: LuRocket,
     iconColor: "text-[#a855f7]", // purple
   },
   {
-    title: "Learning-Focused",
+    title: "Continuous Learning",
     description:
-      "Stay ahead of the curve. We provide resources and time for you to master the latest AI technologies.",
+      "Stay ahead with mentorship, training, and hands-on experience using modern technologies like AI, React, Flutter, WordPress, Shopify, and Wix.",
     icon: LuBrain,
     iconColor: "text-[#ec4899]", // pink
   },
   {
-    title: "Flexible Culture",
+    title: "Flexible Work Environment",
     description:
-      "Remote-first options and flexible hours. We value your output, not just your clock-in time.",
+      "Enjoy a collaborative workplace with flexible schedules, open communication, and a culture built on trust.",
     icon: LuLaptop,
     iconColor: "text-[#3b82f6]", // blue
   },
   {
-    title: "Growth Opportunities",
+    title: "Career Growth",
     description:
-      "Lead projects and grow your career. We promote from within and support your leadership journey.",
+      "Take ownership of meaningful projects, develop new skills, and grow your career with clear advancement opportunities.",
     icon: LuTrendingUp,
     iconColor: "text-[#4ade80]", // green
   },
   {
-    title: "Ethical AI",
+    title: "Innovation-Driven Culture",
     description:
-      "We believe in responsible AI. We build systems that are fair, transparent, and safe.",
+      "We encourage creative thinking, experimentation, and continuous improvement to solve real-world challenges.",
     icon: LuShieldCheck,
     iconColor: "text-[#f59e0b]", // yellow
   },
   {
-    title: "People First",
+    title: "People Come First",
     description:
-      "We care about our team. Mental health, work-life balance, and happiness are priorities.",
+      "We value respect, teamwork, work-life balance, and a supportive environment where everyone can succeed.",
     icon: LuHeart,
     iconColor: "text-[#ef4444]", // red
   },

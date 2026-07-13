@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { projectsData } from "../../data/projectsData";
@@ -7,8 +7,8 @@ import { LuArrowLeft } from "react-icons/lu";
 import Container from "../Container";
 import * as motion from "framer-motion/client";
 
-export default async function ProjectDetails(props) {
-  const params = await props.params;
+export default function ProjectDetails(props) {
+  const params = use(props.params);
   const id = params?.id;
   const project = projectsData.find((p) => p.id.toString() === id);
 
@@ -29,16 +29,16 @@ export default async function ProjectDetails(props) {
   }
 
   return (
-    <main className="min-h-screen py-5 text-[#09090b]">
+    <main className="min-h-screen pt-[120px] pb-20 text-[#09090b]">
       <Container>
-        <div className="  px-4 sm:px-6 lg:px-8">
+        <div className="">
           {/* Back Button */}
           <Link
             href="/portfolio"
             className="inline-flex items-center gap-2 text-zinc-600 hover:text-[#09090b] transition-colors mb-10"
           >
             <LuArrowLeft className="text-xl" />
-            <span>Back to Projects</span>
+            <span>Back to Portfolio</span>
           </Link>
 
           {/* Feature Image Layout */}
