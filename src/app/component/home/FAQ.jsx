@@ -1,13 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Container";
 import Header from "../Header";
 import FAQdropdown from "../FAQdropdown";
 import { motion } from "framer-motion";
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <div className="pt-20">
+    <div className="py-20">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,38 +39,50 @@ const FAQ = () => {
         >
           <FAQdropdown
             question={`What services does Fire AI provide?`}
-            answer={`We build AI-powered chatbots, automation tools, smart web & mobile applications, and intelligent business platforms tailored to your goals  `}
+            answer={`We offer AI Automation, Custom Software Development, Web Development, Mobile App Development, UI/UX Design, Business Automation, API Integration, and Cloud Solutions.`}
             className={`mt-10`}
+            isOpen={openIndex === 0}
+            onToggle={() => handleToggle(0)}
           />
 
           <FAQdropdown
             question={`Do you work with international clients?`}
-            answer={`We build AI-powered chatbots, automation tools, smart web & mobile applications, and intelligent business platforms tailored to your goals  `}
+            answer={`Yes. We collaborate with startups, agencies, and enterprises worldwide through remote communication and agile project management.`}
             className={`mt-10`}
+            isOpen={openIndex === 1}
+            onToggle={() => handleToggle(1)}
           />
 
           <FAQdropdown
-            question={`How long does it take to complete a project?`}
-            answer={`Timelines depend on project scope and complexity — typically 2 to 8 weeks for MVPs and 2 to 4 months for full-scale products`}
+            question={`How long does a project take?`}
+            answer={`Project timelines depend on complexity. Small projects typically take 2–4 weeks, while enterprise solutions may require several months.`}
             className={`mt-10`}
+            isOpen={openIndex === 2}
+            onToggle={() => handleToggle(2)}
           />
 
           <FAQdropdown
-            question={`What technologies do you use?`}
-            answer={`Our team works with modern stacks — Python, Node.js, React, Flutter, Next.js, and AI frameworks like OpenAI, TensorFlow, and LangChain`}
+            question={`Which technologies do you use?`}
+            answer={`We work with React, Next.js, Flutter, Node.js, Python, OpenAI, MongoDB, MySQL, AWS, Docker, Firebase, and many other modern technologies.`}
             className={`mt-10`}
-          />
-
-          <FAQdropdown
-            question={`How can I get a project quote?`}
-            answer={`Simply head to our booking section and share your idea. Our team will review it and send you a custom quote within 24 hours`}
-            className={`mt-10`}
+            isOpen={openIndex === 3}
+            onToggle={() => handleToggle(3)}
           />
 
           <FAQdropdown
             question={`Can you integrate AI into an existing system?`}
-            answer={`Yes, we specialize in integrating AI modules into existing applications — from chat automation to data intelligence dashboards`}
+            answer={`Absolutely. We can integrate AI features such as chatbots, automation, document processing, recommendation systems, and intelligent workflows into existing applications.`}
             className={`mt-10`}
+            isOpen={openIndex === 4}
+            onToggle={() => handleToggle(4)}
+          />
+
+          <FAQdropdown
+            question={`Do you provide maintenance after launch?`}
+            answer={`Yes. We offer ongoing maintenance, monitoring, feature enhancements, bug fixes, and technical support after deployment.`}
+            className={`mt-10`}
+            isOpen={openIndex === 5}
+            onToggle={() => handleToggle(5)}
           />
         </motion.div>
       </Container>

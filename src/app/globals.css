@@ -24,3 +24,27 @@ body {
 button {
   cursor: pointer;
 }
+
+/* Voice of Partners Marquee Styles */
+.partners-container:has(.partner-card:hover) .partner-card:not(:hover) {
+  filter: blur(4px);
+  opacity: 0.7;
+}
+@keyframes marquee-ltr {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-rtl {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-marquee-ltr {
+  animation: marquee-ltr 35s linear infinite;
+}
+.animate-marquee-rtl {
+  animation: marquee-rtl 35s linear infinite;
+}
+.partners-container:hover .animate-marquee-ltr,
+.partners-container:hover .animate-marquee-rtl {
+  animation-play-state: paused !important;
+}

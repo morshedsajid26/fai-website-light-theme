@@ -31,14 +31,17 @@ const Banner = () => {
             viewport={{ once: false, amount: 0.2 }}
           >
             <h3 className="font-space-grotesk font-bold text-5xl text-[#09090b]  leading-[1.2] ">
-              Ignite Intelligence, Shape the Future.
+              AI Solutions That Transform Businesses
             </h3>
             <p className="text-[#09090b] mt-4 mb-10 font-popins text-xl">
-              Brief about AI automation or data innovation.
+              We build AI-powered web applications, intelligent automation systems,
+              custom software, and modern digital experiences that help
+              businesses increase productivity, reduce costs, and scale
+              faster.
             </p>
             <Button
               buttonClass={`text-base`}
-              buttonText={"Let’s Start & Discuss"}
+              buttonText={"Start Your Project"}
               icon={
                 <FaArrowRight className="p-1.5 w-8 h-8 bg-[#FF1010] rounded-full" />
               }

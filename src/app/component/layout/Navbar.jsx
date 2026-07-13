@@ -48,7 +48,7 @@ const Navbar = ({ className }) => {
               <Image
                 src="/FireAiLogo.png"
                 alt="Logo"
-                width={180}
+                width={140}
                 height={60}
                 className="h-auto"
               />

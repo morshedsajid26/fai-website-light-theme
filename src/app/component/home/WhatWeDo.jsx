@@ -211,37 +211,37 @@ const AnimatedLines = ({ containerRef, nodes }) => {
         let offsetFactor = 0.6;
 
         if (["01", "08"].includes(id)) {
-          endX = right;
+          endX = right - 30; // Extend into the card
           endY = cardCy;
           pathType = "l";
           dir = "v";
         } else if (["03", "10"].includes(id)) {
-          endX = left;
+          endX = left + 30; // Extend into the card
           endY = cardCy;
           pathType = "l";
           dir = "v";
         } else if (["04", "06"].includes(id)) {
-          endX = right;
+          endX = right - 30; // Extend into the card
           endY = cardCy;
           pathType = "s";
           if (id === "04") offsetFactor = 0.4;
           if (id === "06") offsetFactor = 0.4;
         } else if (["05", "07"].includes(id)) {
-          endX = left;
+          endX = left + 30; // Extend into the card
           endY = cardCy;
           pathType = "s";
           if (id === "05") offsetFactor = 0.4;
           if (id === "07") offsetFactor = 0.4;
         } else if (id === "02") {
           endX = cardCx;
-          endY = bottom;
+          endY = bottom - 60; // Extend deep into the card
           pathType = "l";
-          dir = "v";
+          dir = "h"; // Enter vertically
         } else if (id === "09") {
           endX = cardCx;
-          endY = top;
+          endY = top + 60; // Extend deep into the card
           pathType = "l";
-          dir = "v";
+          dir = "h"; // Enter vertically
         } else {
           return;
         }
@@ -395,7 +395,7 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="py-20 md:py-32 overflow-hidden bg-[#fafaf9] relative">
+    <div className="py-20 md:py-35 overflow-hidden bg-[#fafaf9] relative">
       {/* Background radial gradient mesh to simulate the soft background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle,#ff4e27_0%,transparent_60%)] opacity-[0.06] blur-[60px]" />
@@ -416,10 +416,10 @@ const WhatWeDo = () => {
 
       <Container className="relative z-10">
         {/* Header Section */}
-      <Header
-      titleText={`What We Do?`}
-      subtitleText={`Transforming ideas into intelligent digital experiences`}
-      />
+        <Header
+          titleText={`What We Do?`}
+          subtitleText={`We design, develop, and automate digital products that empower businesses to operate more efficiently and grow faster. `}
+        />
 
         {/* Network Grid Section */}
         <div
@@ -440,14 +440,17 @@ const WhatWeDo = () => {
                 return (
                   <div
                     key={item.id}
-                    className="flex items-center justify-center relative py-12 lg:py-0 h-[220px] lg:h-full lg:row-span-2"
+                    className="flex items-center justify-center relative py-12 lg:py-0 h-[220px] lg:h-full lg:row-span-2 "
                   >
-                    {/* Softer background glow */}
-                    <div className="absolute w-[180px] h-[180px] bg-[#ff4e27] rounded-full blur-[50px] opacity-30 animate-pulse pointer-events-none" />
+                    {/* Background mask to hide lines underneath via z-index */}
+                    <div className="absolute w-[198px] h-[198px] bg-[#fafaf9] rounded-full z-0" />
 
-                    {/* Dashed outer ring - softer */}
+                    {/* Softer background glow */}
+                    <div className="absolute w-[180px] h-[180px] bg-[#ff4e27] rounded-full blur-[50px] opacity-30 animate-pulse pointer-events-none z-0" />
+
+                    {/* Dashed outer ring - opaque */}
                     <div
-                      className="absolute w-[200px] h-[200px] rounded-full border-[1.5px] border-dashed border-[#ff4e27]/50 animate-[spin_15s_linear_infinite]"
+                      className="absolute w-[200px] h-[200px] rounded-full border-[1.5px] border-dashed border-[#ff4e27] animate-[spin_15s_linear_infinite] z-10"
                       style={{ boxShadow: "0 0 15px rgba(255,78,39,0.15)" }}
                     />
 
@@ -503,8 +506,8 @@ const WhatWeDo = () => {
                 <div
                   key={item.id}
                   className={`w-full h-full ${
-                    item.id === "02" ? "lg:-translate-y-20" : ""
-                  } ${item.id === "09" ? "lg:translate-y-20" : ""}`}
+                    item.id === "02" ? "lg:-translate-y-32" : ""
+                  } ${item.id === "09" ? "lg:translate-y-32" : ""}`}
                 >
                   <motion.div
                     ref={(el) => measureNode(item.id, el)}

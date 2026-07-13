@@ -24,73 +24,80 @@ const WhoWeAre = () => {
 
         <div className="grid grid-cols-12 gap-10 mt-15">
           <motion.div
-            className="col-span-12 md:col-span-6 grid grid-cols-12 gap-5"
+            className="col-span-12 lg:col-span-6 grid grid-cols-2 gap-4 lg:gap-6 min-h-[400px] lg:min-h-[500px]"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <div className="col-span-6">
+            <div className="relative w-full h-full">
               <Image
                 src={"/office1.png"}
                 alt="office1"
-                width={400}
-                height={200}
+                fill
                 quality={100}
-                className="h-auto"
+                className="object-cover rounded-2xl"
               />
             </div>
-            <div className="col-span-6 space-y-5">
-              <Image
-                src={"/office2.png"}
-                alt="office1"
-                width={400}
-                height={200}
-                quality={100}
-                className="h-auto"
-              />
-              <Image
-                src={"/office3.png"}
-                alt="office1"
-                width={400}
-                height={200}
-                quality={100}
-                className="h-auto"
-              />
+            <div className="flex flex-col gap-4 lg:gap-6 h-full">
+              <div className="relative w-full h-1/2">
+                <Image
+                  src={"/office2.png"}
+                  alt="office2"
+                  fill
+                  quality={100}
+                  className="object-cover rounded-2xl"
+                />
+              </div>
+              <div className="relative w-full h-1/2">
+                <Image
+                  src={"/office3.png"}
+                  alt="office3"
+                  fill
+                  quality={100}
+                  className="object-cover rounded-2xl"
+                />
+              </div>
             </div>
           </motion.div>
 
           <motion.div
-            className="col-span-12 md:col-span-6"
+            className="col-span-12 lg:col-span-6 flex flex-col justify-center"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <div className="font-poppins text-xl text-zinc-700 space-y-5 mb-10">
+            <div className="font-poppins text-base md:text-lg text-zinc-700 space-y-4 mb-8">
               <p>
                 At <span className="text-[#E53022] font-medium">Fire AI</span>,
-                we harness the trans-formative power of artificial intelligence
-                to create technology that learns, adapts, and evolves.
+                we build intelligent digital solutions that empower businesses
+                to innovate, automate, and grow.
               </p>
               <p>
-                As a pioneering AI-based software provider from Dhaka,
-                Bangladesh, and a concern of{" "}
+                As a pioneering AI software company based in Dhaka, Bangladesh,
+                and a concern of{" "}
                 <span className="text-[#E53022] font-medium">
                   Betopia Group
                 </span>
-                , Fire AI is built by a passionate team of engineers, designers,
-                and innovators dedicated to shaping the next era of smart
-                automation and human-centric design.
+                , we combine artificial intelligence, software engineering, and
+                creative design to deliver impactful technology solutions.
               </p>
               <p>
-                From AI-powered chat-bots and automation systems to intelligent
-                web and app solutions, we craft digital experiences that are
-                fast, scalable, and seamlessly connected.
+                Our expertise spans{" "}
+                <span className="font-semibold">
+                  AI Automation, Custom Software Development, Web & Mobile
+                  Applications, UI/UX Design, CMS Development (WordPress,
+                  Shopify & Wix), Google Ads Management, and Business Process
+                  Automation,
+                </span>
+                {" "}providing businesses with end-to-end digital transformation
+                under one roof.
               </p>
               <p>
-                Our mission is simple - to make technology feel more natural,
-                more efficient, and more human
+                Whether you're launching a startup, modernizing an existing
+                business, or scaling your online presence, Fire AI is your
+                trusted technology partner.
               </p>
             </div>
 

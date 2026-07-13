@@ -53,7 +53,11 @@ const Loader = ({ children }) => {
               <motion.div
                 className="absolute inset-16 md:inset-20 rounded-full border-[1px] border-[#E53022] opacity-40"
                 animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
 
               {/* Central Icon Container */}
@@ -71,7 +75,7 @@ const Loader = ({ children }) => {
                   alt="Fire AI Icon"
                   width={100}
                   height={100}
-                  className="w-16 h-16 md:w-25 md:h-25 object-contain drop-shadow-md"
+                  className="w-20 h-20 md:w-25 md:h-25 object-contain drop-shadow-md"
                   priority
                 />
               </motion.div>

@@ -100,7 +100,9 @@ const TechnologyStack = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <Header titleText="The Technology Stack Behind Fire AI" />
+          <Header titleText="Technologies We Use to Build Powerful AI Solutions"
+          subtitleText={`Our development team uses modern frameworks, AI platforms, cloud technologies, and automation tools to create scalable, secure, and future-ready digital products.`}
+          />
         </motion.div>
 
         <motion.div
