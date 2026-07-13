@@ -21,7 +21,7 @@ const Navbar = ({ className }) => {
 
   return (
     <Container
-      className={`bg-white/40 backdrop-blur-md shadow-sm border border-zinc-200/50 p-2 rounded-2xl w-full fixed top-4 left-1/2 -translate-x-1/2  z-50 ${className}`}
+      className={`bg-white/65 backdrop-blur-md shadow-sm border border-zinc-200/50 p-2 rounded-2xl w-full fixed top-4 left-1/2 -translate-x-1/2  z-50 ${className}`}
     >
       <nav className="">
         <motion.div
@@ -72,7 +72,7 @@ const Navbar = ({ className }) => {
                     className={`transition-colors duration-200 px-3 py-2 rounded-md text-lg xl:text-2xl font-bold font-space-grotesk ${
                       isActive
                         ? " bg-gradient-to-r from-[#E53022] to-[#F8A024] bg-clip-text text-transparent "
-                        : "text-[#09090b] hover:bg-zinc-100/80"
+                        : "text-[#09090b] transition-all duration-300 hover:bg-gradient-to-r from-[#E53022] to-[#F8A024] hover:bg-clip-text hover:text-transparent"
                     }`}
                   >
                     {item.name}

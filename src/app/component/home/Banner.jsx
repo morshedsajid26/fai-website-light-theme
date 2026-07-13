@@ -10,19 +10,19 @@ import BannerThreeBg from "./BannerThreeBg";
 const Banner = () => {
   return (
     <div className="">
-      <div className="relative w-full px-6 overflow-hidden h-screen bg-gradient-to-r from-[#e6dfd7] via-[#e2cbb9] to-[#d67039]">
-        {/* <video
+      <div className="relative w-full px-6 overflow-hidden h-screen ">
+        <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover -z-10"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src="/HomeAnimation.mp4" type="video/mp4" />
-        </video> */}
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-[2px] z-0 pointer-events-none"></div>
-        
-        <Container className="relative z-10 h-full max-w-7xl mx-auto flex items-center justify-between">
+        </video>
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-[2px] z-10 pointer-events-none"></div>
+
+        <Container className="relative z-20 h-full max-w-7xl mx-auto flex items-center justify-between">
           <motion.div
             className="w-[40%] flex flex-col items-start justify-center h-screen"
             initial={{ opacity: 0, y: 30 }}
@@ -30,14 +30,13 @@ const Banner = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h3 className="font-space-grotesk font-bold text-5xl text-[#09090b]  leading-[1.2] ">
+            <h3 className="font-space-grotesk font-bold text-5xl text-[#ffffff]  leading-[1.2] ">
               AI Solutions That Transform Businesses
             </h3>
-            <p className="text-[#09090b] mt-4 mb-10 font-popins text-xl">
-              We build AI-powered web applications, intelligent automation systems,
-              custom software, and modern digital experiences that help
-              businesses increase productivity, reduce costs, and scale
-              faster.
+            <p className="text-[#ffffff] mt-4 mb-10 font-popins text-xl">
+              We build AI-powered web applications, intelligent automation
+              systems, custom software, and modern digital experiences that help
+              businesses increase productivity, reduce costs, and scale faster.
             </p>
             <Button
               buttonClass={`text-base`}
@@ -63,11 +62,11 @@ const Banner = () => {
               />
 
               <div>
-                <h4 className="text-[#09090b] font-bold font-space-grotesk text-xl">
+                <h4 className="text-[#ffffff] font-bold font-space-grotesk text-xl">
                   12K+ Worldwide Clients
                 </h4>
 
-                <p className=" font-popins text-sm text-zinc-700 mt-2 w-[70%]">
+                <p className=" font-popins text-sm text-white mt-2 w-[70%]">
                   Trusted by startup, enterprises, and global brands in 40+
                   countries
                 </p>
