@@ -28,11 +28,11 @@ const Banner = () => {
           viewport={{ once: false }}
         >
           <h3 className="text-5xl font-space-grotesk font-bold text-[#09090b] leading-tight">
-            Intelligent Solutions. Real Impact
+           Transforming Ideas Into Intelligent Digital Solutions 
+
           </h3>
           <p className="text-[#09090b] font-poppins text-xl mt-3 max-w-2xl">
-            At <span className="text-[#E53022]">Fire AI</span>, We believe the
-            best Technology feels less artificial and more intuitive
+            At <span className="text-[#E53022]">Fire AI</span>, we build AI-powered solutions, custom software, and digital experiences that help businesses automate, innovate, and achieve measurable growth. 
           </p>
         </motion.div>
       </div>

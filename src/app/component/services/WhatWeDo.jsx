@@ -7,93 +7,119 @@ import {
   FiSmartphone,
   FiCpu,
   FiCode,
-  FiMonitor,
   FiLayers,
   FiLayout,
+  FiMonitor,
+  FiTrendingUp,
+  FiCheck,
 } from "react-icons/fi";
 import Header from "../Header";
 
 const servicesData = [
   {
     id: 1,
-    icon: <FiSmartphone size={18} />,
-    title: "Mobile App Development",
-    desc: "We craft seamless, high-performance mobile applications for both iOS and Android platforms. Our development approach blends intuitive, user-friendly interfaces with powerful, scalable functionality. From the conceptual phase to the final marketplace launch, we focus on creating apps that help businesses engage their customers effectively and stand out in the digital landscape.",
-    sliderImages: ["/AppLeft.png", "/AppRight.png", "/App.png"],
+    icon: <FiCpu size={18} />,
+    title: "AI/ML Development",
+    desc: "At Fire AI, we leverage the power of Artificial Intelligence and Machine Learning to build intelligent solutions that automate processes, enhance decision-making, and help businesses operate smarter.",
+    offers: [
+      "AI-Powered Automation",
+      "AI Agents & Chatbots",
+      "Voice Agents",
+      "Machine Learning Solutions",
+      "Intelligent Data Processing"
+    ],
+    image: "/AIDrivestCover.jpg.jpeg",
   },
   {
     id: 2,
-    icon: <FiCpu size={18} />,
-    title: "AI/ML Development",
-    desc: "Our team provides smart, data-driven solutions powered by Artificial Intelligence and Machine learning. These services are designed to turn complex data sets into actionable business insights. We develop intelligent tools, automation systems, and predictive models that empower businesses to make smarter, more informed decisions.",
-    sliderImages: ["/AiLeft.png", "/AiRight.png", "/AI.png"],
+    icon: <FiSmartphone size={18} />,
+    title: "Mobile App Development",
+    desc: "We design and develop high-performance mobile applications that deliver seamless user experiences and help businesses connect with customers anywhere.",
+    offers: [
+      "iOS & Android Applications",
+      "Cross-Platform App Development",
+      "Custom Business Apps",
+      "App UI/UX Design",
+      "API Integration"
+    ],
+    image: "/MobileAppCover.jpg.jpeg",
   },
   {
     id: 3,
     icon: <FiCode size={18} />,
     title: "Custom Website Development",
-    desc: "This service focuses on building tailored websites from the ground up, specifically designed to meet your unique business needs. These websites are engineered for high performance, maximum user engagement, and clear, measurable results. Unlike generic templates, custom development allows for complete control over the site's architecture and functionality.",
-    sliderImages: ["/WebLeft.png", "/WebRight.png", "/Web.png"],
+    desc: "We develop high-performance, custom websites that are tailored to your business goals, delivering exceptional user experiences with secure, scalable, and modern web technologies.",
+    offers: [
+      "Custom Web Applications",
+      "Business Websites",
+      "E-commerce Platforms",
+      "SAAS Websites",
+      "Third-Party Integrations"
+    ],
+    image: "/WebsiteCover.jpg.jpeg",
   },
   {
     id: 4,
-    icon: <FiMonitor size={18} />,
-    title: "Gaming App Development",
-    desc: "We specialize in building immersive and scalable gaming experiences tailored for both mobile and web platforms. Our team manages the entire process from initial concept to launch, ensuring that every game combines engaging gameplay with robust technology. By focusing on high performance and scalability, we deliver products that prioritize long-term user retention.",
-    sliderImages: ["/App.png", "/AppLeft.png", "/AppRight.png"],
+    icon: <FiLayers size={18} />,
+    title: "CMS Development",
+    desc: "We build flexible and easy-to-manage CMS solutions that empower businesses to update, manage, and grow their digital presence without technical complexity.",
+    offers: [
+      "WordPress Development",
+      "Wix Website Solutions",
+      "CMS Customization",
+      "Website Maintenance",
+      "Content Management Solutions"
+    ],
+    image: "/CMScover.jpg.jpeg",
   },
   {
     id: 5,
-    icon: <FiLayers size={18} />,
-    title: "CMS Development",
-    desc: "CMS (Content Management System) development provides you with flexible and customized platforms to manage your digital assets with ease. This service focuses on creating an efficient backend infrastructure, allowing you to update, organize, and publish content without needing deep technical knowledge. It is designed to streamline your internal digital operations.",
-    sliderImages: ["/UIUX.png", "/Web.png", "/WebRight.png"], // Removed /images/wordpress.png as it might not exist
+    icon: <FiLayout size={18} />,
+    title: "UI/UX Design",
+    desc: "Our UI/UX design approach focuses on creating intuitive, visually engaging, and user-centered digital experiences that make every interaction simple, enjoyable, and impactful.",
+    offers: [
+      "User Interface Design",
+      "User Experience Research",
+      "Wireframing & Prototyping",
+      "Design Systems",
+      "Mobile & Web App Design"
+    ],
+    image: "/UIcover.png.jpeg",
   },
   {
     id: 6,
-    icon: <FiLayout size={18} />,
-    title: "UI/UX Design",
-    desc: "UI (User Interface) and UX (User Experience) Design is centered on the visual and experiential aspects of a digital product. This service creates user-centered and visually compelling designs that ensure your product is not only beautiful but also intuitive and easy to use. The goal is to provide a seamless journey for the user from the moment they land on your platform.",
-    sliderImages: ["/UiUxLeft.png", "/UiUxRight.png", "/UIUX.png"],
+    icon: <FiTrendingUp size={18} />,
+    title: "Google Ads & Digital Marketing",
+    desc: "We create data-driven Google Ads strategies that help businesses reach the right audience, increase visibility, and generate measurable results through optimized campaigns.",
+    offers: [
+      "Google Search Ads",
+      "Display Advertising",
+      "Campaign Optimization",
+      "Conversion Tracking",
+      "Performance Analysis"
+    ],
+    image: "/Web.png",
   },
 ];
 
-const LaptopSlider = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [images]);
-
+const LaptopSlider = ({ image }) => {
   return (
     <div className="relative mx-auto w-full max-w-[500px] xl:max-w-[600px] my-10 lg:my-0">
       {/* Laptop Screen / Lid */}
-      <div className="relative bg-[#2a2a2a] rounded-t-[1.5rem] p-3 pb-5 border-b-4 border-[#1a1a1a] shadow-2xl z-10">
+      <div className="relative bg-[#2a2a2a] rounded-t-[1.5rem] p-3 pb-5 border-b-4 border-[#1a1a1a] shadow-2xl z-10 ">
         {/* Camera */}
         <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-black rounded-full"></div>
 
         {/* Screen Area */}
         <div className="relative aspect-[16/10] bg-black overflow-hidden rounded-md border border-[#1a1a1a]">
-          <AnimatePresence initial={false}>
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="absolute inset-0"
-            >
-              <Image
-                src={images[currentIndex] || "/UIUX.png"}
-                alt="Slider screen"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          </AnimatePresence>
+          <div className="absolute inset-0">
+            <Image
+              src={image || "/UIUX.png"}
+              alt="Service presentation"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
@@ -140,12 +166,25 @@ const WhatWeDo = () => {
                       {service.title}
                     </h2>
                   </div>
-                  <p className="text-[#6c757d] font-poppins leading-relaxed text-[15px] md:text-base">
+                  <p className="text-[#6c757d] font-poppins leading-relaxed text-[15px] md:text-base mb-6">
                     {service.desc}
                   </p>
+                  <div>
+                    <h3 className="font-bold text-[#1a1a1a] mb-3 font-space-grotesk text-lg">
+                      What We Offer:
+                    </h3>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
+                      {service.offers.map((offer, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-[#4a4a4a] text-sm md:text-[15px]">
+                          <span className="mt-1 text-[#ff4e27]"><FiCheck size={16} /></span>
+                          <span className="font-poppins">{offer}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
 
-                {/* Laptop Slider */}
+                {/* Laptop Display */}
                 <motion.div
                   initial={{ opacity: 0, x: isEven ? -100 : 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -153,7 +192,7 @@ const WhatWeDo = () => {
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                   className="w-full lg:w-1/2 px-4 sm:px-8"
                 >
-                  <LaptopSlider images={service.sliderImages} />
+                  <LaptopSlider image={service.image} />
                 </motion.div>
               </div>
             );
