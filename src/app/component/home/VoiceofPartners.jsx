@@ -17,14 +17,15 @@ const Card = ({ name, text, company }) => {
         alt={`logo`}
         width={100}
         height={50}
-        className="h-[100px] w-auto"
+        className="h-[40px] w-auto"
       />
 
-      <p className="font-space-grotesk text-zinc-700 text-lg md:text-xl leading-relaxed md:h-30 h-50">
+      <p className="font-space-grotesk text-zinc-700 text-lg md:text-xl leading-relaxed md:h-30 h-50
+      mt-5 ">
         "{text}"
       </p>
 
-      <div className="font-space-grotesk flex flex-col mt-4">
+      <div className="font-space-grotesk flex flex-col mt-5">
         <span className="text-[#E53022] font-bold text-xl">{name}</span>
         <span className="text-zinc-500 text-base">{company}</span>
       </div>

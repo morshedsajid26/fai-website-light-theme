@@ -34,13 +34,13 @@ const Footer = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-[80%] md:w-[80%]"
+            className="w-[80%] md:w-[65%]"
           >
             <Image
               src="/FireAiLogo.png"
               alt="Watermark"
-              width={1200}
-              height={1200}
+              width={700}
+              height={1100}
               className="w-full h-auto object-contain"
             />
           </motion.div>

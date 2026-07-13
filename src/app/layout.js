@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import Navbar from "./component/layout/Navbar";
 import Footer from "./component/layout/Footer";
+import Loader from "./component/layout/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,9 +49,11 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${poppins.variable} ${istokWeb.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#fafafa] text-[#09090b]">
-        <Navbar />
-        {children}
-        <Footer />
+        <Loader>
+          <Navbar />
+          {children}
+          <Footer />
+        </Loader>
       </body>
     </html>
   );
