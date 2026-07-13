@@ -5,6 +5,33 @@ import Header from "../Header";
 import FAQdropdown from "../FAQdropdown";
 import { motion } from "framer-motion";
 
+const faqsData = [
+  {
+    question: "What services does Fire AI provide?",
+    answer: "We offer AI Automation, Custom Software Development, Web Development, Mobile App Development, UI/UX Design, Business Automation, API Integration, and Cloud Solutions.",
+  },
+  {
+    question: "Do you work with international clients?",
+    answer: "Yes. We collaborate with startups, agencies, and enterprises worldwide through remote communication and agile project management.",
+  },
+  {
+    question: "How long does a project take?",
+    answer: "Project timelines depend on complexity. Small projects typically take 2–4 weeks, while enterprise solutions may require several months.",
+  },
+  {
+    question: "Which technologies do you use?",
+    answer: "We work with React, Next.js, Flutter, Node.js, Python, OpenAI, MongoDB, MySQL, AWS, Docker, Firebase, and many other modern technologies.",
+  },
+  {
+    question: "Can you integrate AI into an existing system?",
+    answer: "Absolutely. We can integrate AI features such as chatbots, automation, document processing, recommendation systems, and intelligent workflows into existing applications.",
+  },
+  {
+    question: "Do you provide maintenance after launch?",
+    answer: "Yes. We offer ongoing maintenance, monitoring, feature enhancements, bug fixes, and technical support after deployment.",
+  },
+];
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -25,7 +52,7 @@ const FAQ = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-col items-center "
+          className="flex flex-col items-center mt-10 gap-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.1 }}
@@ -37,53 +64,16 @@ const FAQ = () => {
             },
           }}
         >
-          <FAQdropdown
-            question={`What services does Fire AI provide?`}
-            answer={`We offer AI Automation, Custom Software Development, Web Development, Mobile App Development, UI/UX Design, Business Automation, API Integration, and Cloud Solutions.`}
-            className={`mt-10`}
-            isOpen={openIndex === 0}
-            onToggle={() => handleToggle(0)}
-          />
-
-          <FAQdropdown
-            question={`Do you work with international clients?`}
-            answer={`Yes. We collaborate with startups, agencies, and enterprises worldwide through remote communication and agile project management.`}
-            className={`mt-10`}
-            isOpen={openIndex === 1}
-            onToggle={() => handleToggle(1)}
-          />
-
-          <FAQdropdown
-            question={`How long does a project take?`}
-            answer={`Project timelines depend on complexity. Small projects typically take 2–4 weeks, while enterprise solutions may require several months.`}
-            className={`mt-10`}
-            isOpen={openIndex === 2}
-            onToggle={() => handleToggle(2)}
-          />
-
-          <FAQdropdown
-            question={`Which technologies do you use?`}
-            answer={`We work with React, Next.js, Flutter, Node.js, Python, OpenAI, MongoDB, MySQL, AWS, Docker, Firebase, and many other modern technologies.`}
-            className={`mt-10`}
-            isOpen={openIndex === 3}
-            onToggle={() => handleToggle(3)}
-          />
-
-          <FAQdropdown
-            question={`Can you integrate AI into an existing system?`}
-            answer={`Absolutely. We can integrate AI features such as chatbots, automation, document processing, recommendation systems, and intelligent workflows into existing applications.`}
-            className={`mt-10`}
-            isOpen={openIndex === 4}
-            onToggle={() => handleToggle(4)}
-          />
-
-          <FAQdropdown
-            question={`Do you provide maintenance after launch?`}
-            answer={`Yes. We offer ongoing maintenance, monitoring, feature enhancements, bug fixes, and technical support after deployment.`}
-            className={`mt-10`}
-            isOpen={openIndex === 5}
-            onToggle={() => handleToggle(5)}
-          />
+          {faqsData.map((faq, index) => (
+            <FAQdropdown
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              className={``}
+              isOpen={openIndex === index}
+              onToggle={() => handleToggle(index)}
+            />
+          ))}
         </motion.div>
       </Container>
     </div>

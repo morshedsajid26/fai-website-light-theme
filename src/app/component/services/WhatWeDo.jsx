@@ -4,21 +4,37 @@ import { motion, AnimatePresence } from "framer-motion";
 import Container from "../Container";
 import Image from "next/image";
 import {
-  FiSmartphone,
-  FiCpu,
-  FiCode,
-  FiLayers,
-  FiLayout,
-  FiMonitor,
-  FiTrendingUp,
   FiCheck,
 } from "react-icons/fi";
+import {
+  FaRobot,
+  FaMobileAlt,
+  FaLaptopCode,
+  FaWordpress,
+  FaPaintBrush,
+} from "react-icons/fa";
 import Header from "../Header";
+
+const GoogleAdsOriginalIcon = ({ size, className, style }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 250 230" 
+    className={className}
+    style={style}
+  >
+    <path fill="#3C8BD9" d="M85.9,28.6c2.4-6.3,5.7-12.1,10.6-16.8c19.6-19.1,52-14.3,65.3,9.7c10,18.2,20.6,36,30.9,54 c17.2,29.9,34.6,59.8,51.6,89.8c14.3,25.1-1.2,56.8-29.6,61.1c-17.4,2.6-33.7-5.4-42.7-21c-15.1-26.3-30.3-52.6-45.4-78.8 c-0.3-0.6-0.7-1.1-1.1-1.6c-1.6-1.3-2.3-3.2-3.3-4.9c-6.7-11.8-13.6-23.5-20.3-35.2c-4.3-7.6-8.8-15.1-13.1-22.7 c-3.9-6.8-5.7-14.2-5.5-22C83.6,36.2,84.1,32.2,85.9,28.6"/>
+    <path fill="#FABC04" d="M85.9,28.6c-0.9,3.6-1.7,7.2-1.9,11c-0.3,8.4,1.8,16.2,6,23.5C101,82,112,101,122.9,120c1,1.7,1.8,3.4,2.8,5 c-6,10.4-12,20.7-18.1,31.1c-8.4,14.5-16.8,29.1-25.3,43.6c-0.4,0-0.5-0.2-0.6-0.5c-0.1-0.8,0.2-1.5,0.4-2.3 c4.1-15,0.7-28.3-9.6-39.7c-6.3-6.9-14.3-10.8-23.5-12.1c-12-1.7-22.6,1.4-32.1,8.9c-1.7,1.3-2.8,3.2-4.8,4.2 c-0.4,0-0.6-0.2-0.7-0.5c4.8-8.3,9.5-16.6,14.3-24.9C45.5,98.4,65.3,64,85.2,29.7C85.4,29.3,85.7,29,85.9,28.6"/>
+    <path fill="#34A852" d="M11.8,158c1.9-1.7,3.7-3.5,5.7-5.1c24.3-19.2,60.8-5.3,66.1,25.1c1.3,7.3,0.6,14.3-1.6,21.3 c-0.1,0.6-0.2,1.1-0.4,1.7c-0.9,1.6-1.7,3.3-2.7,4.9c-8.9,14.7-22,22-39.2,20.9C20,225.4,4.5,210.6,1.8,191 c-1.3-9.5,0.6-18.4,5.5-26.6c1-1.8,2.2-3.4,3.3-5.2C11.1,158.8,10.9,158,11.8,158"/>
+  </svg>
+);
 
 const servicesData = [
   {
     id: 1,
-    icon: <FiCpu size={18} />,
+    icon: <FaRobot size={20} />,
+    color: "#ff4e27",
     title: "AI/ML Development",
     desc: "At Fire AI, we leverage the power of Artificial Intelligence and Machine Learning to build intelligent solutions that automate processes, enhance decision-making, and help businesses operate smarter.",
     offers: [
@@ -32,7 +48,8 @@ const servicesData = [
   },
   {
     id: 2,
-    icon: <FiSmartphone size={18} />,
+    icon: <FaMobileAlt size={20} />,
+    color: "#3DDC84",
     title: "Mobile App Development",
     desc: "We design and develop high-performance mobile applications that deliver seamless user experiences and help businesses connect with customers anywhere.",
     offers: [
@@ -46,7 +63,8 @@ const servicesData = [
   },
   {
     id: 3,
-    icon: <FiCode size={18} />,
+    icon: <FaLaptopCode size={20} />,
+    color: "#3b82f6",
     title: "Custom Website Development",
     desc: "We develop high-performance, custom websites that are tailored to your business goals, delivering exceptional user experiences with secure, scalable, and modern web technologies.",
     offers: [
@@ -60,7 +78,8 @@ const servicesData = [
   },
   {
     id: 4,
-    icon: <FiLayers size={18} />,
+    icon: <FaWordpress size={20} />,
+    color: "#21759b",
     title: "CMS Development",
     desc: "We build flexible and easy-to-manage CMS solutions that empower businesses to update, manage, and grow their digital presence without technical complexity.",
     offers: [
@@ -74,7 +93,8 @@ const servicesData = [
   },
   {
     id: 5,
-    icon: <FiLayout size={18} />,
+    icon: <FaPaintBrush size={20} />,
+    color: "#ec4899",
     title: "UI/UX Design",
     desc: "Our UI/UX design approach focuses on creating intuitive, visually engaging, and user-centered digital experiences that make every interaction simple, enjoyable, and impactful.",
     offers: [
@@ -88,7 +108,8 @@ const servicesData = [
   },
   {
     id: 6,
-    icon: <FiTrendingUp size={18} />,
+    icon: <GoogleAdsOriginalIcon size={20} />,
+    color: "#4285F4",
     title: "Google Ads & Digital Marketing",
     desc: "We create data-driven Google Ads strategies that help businesses reach the right audience, increase visibility, and generate measurable results through optimized campaigns.",
     offers: [
@@ -98,7 +119,7 @@ const servicesData = [
       "Conversion Tracking",
       "Performance Analysis"
     ],
-    image: "/Web.png",
+    image: "/GoogleAds.jpeg",
   },
 ];
 
@@ -158,11 +179,14 @@ const WhatWeDo = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   className="w-full lg:w-1/2"
                 >
-                  <div className="mb-4">
-                    <div className="inline-flex items-center justify-center p-2 border border-zinc-300 rounded-md text-zinc-600 mb-4 bg-white shadow-sm">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div 
+                      className="inline-flex items-center justify-center p-2.5 border border-zinc-200 rounded-lg bg-white shadow-[0_2px_10px_rgba(0,0,0,0.04)] shrink-0"
+                      style={{ color: service.color }}
+                    >
                       {service.icon}
                     </div>
-                    <h2 className="text-3xl md:text-[34px] font-bold text-[#4a4a4a] font-space-grotesk mb-6">
+                    <h2 className="text-2xl md:text-[34px] font-bold text-[#4a4a4a] font-space-grotesk leading-tight">
                       {service.title}
                     </h2>
                   </div>
