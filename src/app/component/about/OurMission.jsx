@@ -7,16 +7,9 @@ import { motion } from "framer-motion";
 
 const OurMission = () => {
   return (
-    <div className="pt-20">
+    <div className="py-10 bg-[#E76634]/5">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: false, amount: 0.2 }}
-        >
-          <Header titleText={`Our Mission/Vission`} />
-        </motion.div>
+
 
         <div className="space-y-20">
           <motion.div
@@ -26,21 +19,26 @@ const OurMission = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <p className="font-poppins text-xl leading-[2] text-zinc-700 md:w-[50%] md:mb-0 mb-10 text-center md:text-start">
-              At Fire AI, our mission is to bridge the gap between people and
-              technology through the power of artificial intelligence.We strive
-              to create smart, intuitive, and adaptive solutions that help
-              businesses automate tasks, understand data, and deliver
-              exceptional user experiences.Every product we build reflects our
-              belief that technology should feel natural, work efficiently, and
-              create real impact in people’s lives
-            </p>
-            <Image
-              src="/mission1.png"
-              alt="Our Mission"
-              width={450}
-              height={100}
-            />
+            <div className="w-full md:w-[50%] md:mb-0 mb-10 text-center md:text-start">
+              <h2 className="text-3xl md:text-4xl font-bold font-space-grotesk text-[#0f172a] mb-2">
+                Our Mission
+              </h2>
+              <h3 className="text-xl md:text-xl font-semibold bg-gradient-to-r from-[#E53022] to-[#F8A024] bg-clip-text text-transparent mb-6">
+                Turning Ideas into Intelligent Solutions
+              </h3>
+              <p className="font-poppins text-lg md:text-xl leading-[1.8] text-zinc-600">
+                Our mission is to help businesses solve real-world challenges with AI and custom software. By combining innovation, technical expertise, and a user-first approach, we create digital solutions that improve efficiency, drive growth, and deliver lasting value.
+              </p>
+            </div>
+            <div className="w-full md:w-[45%] flex justify-center md:justify-end">
+              <Image
+                src="/mission1.png"
+                alt="Our Mission"
+                width={450}
+                height={350}
+                className="w-full max-w-[450px] h-auto object-contain"
+              />
+            </div>
           </motion.div>
 
           <motion.div
@@ -50,21 +48,26 @@ const OurMission = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <p className="font-poppins text-xl leading-[2] text-zinc-700 md:w-[50%] md:mb-0 mb-10 text-center md:text-start">
-              At Fire AI, our mission is to bridge the gap between people and
-              technology through the power of artificial intelligence.We strive
-              to create smart, intuitive, and adaptive solutions that help
-              businesses automate tasks, understand data, and deliver
-              exceptional user experiences.Every product we build reflects our
-              belief that technology should feel natural, work efficiently, and
-              create real impact in people’s lives
-            </p>
-            <Image
-              src="/mission2.png"
-              alt="Our Mission"
-              width={450}
-              height={100}
-            />
+            <div className="w-full md:w-[50%] md:mb-0 mb-10 text-center md:text-start">
+              <h2 className="text-3xl md:text-4xl font-bold font-space-grotesk text-[#0f172a] mb-2">
+                Our Vision
+              </h2>
+              <h3 className="text-xl md:text-xl font-bold font-istok-web bg-gradient-to-r from-[#E53022] to-[#F8A024] bg-clip-text text-transparent mb-6">
+                Leading the Next Generation of Digital Innovation
+              </h3>
+              <p className="font-poppins text-lg md:text-xl leading-[1.8] text-zinc-600">
+                Our vision is to become a globally recognized AI and software development company, empowering businesses with intelligent technologies that transform operations, inspire innovation, and create meaningful impact.
+              </p>
+            </div>
+            <div className="w-full md:w-[45%] flex justify-center md:justify-start">
+              <Image
+                src="/mission2.png"
+                alt="Our Vision"
+                width={450}
+                height={350}
+                className="w-full max-w-[450px] h-auto object-contain"
+              />
+            </div>
           </motion.div>
         </div>
       </Container>

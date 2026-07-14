@@ -74,7 +74,7 @@ const row2 = [
 ];
 
 const TechCard = ({ tech }) => (
-  <div className="flex flex-col items-center justify-center w-[200px] md:w-[300px] gap-6">
+  <div className="flex flex-col items-center justify-center w-[150px] md:w-[250px] lg:w-[300px] gap-4 md:gap-6">
     {tech.icon ? (
       tech.icon
     ) : (
@@ -92,7 +92,7 @@ const TechCard = ({ tech }) => (
 
 const TechnologyStack = () => {
   return (
-    <div className="pt-20 overflow-x-hidden">
+    <div className="py-20 overflow-x-hidden bg-[#fafaf9]">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

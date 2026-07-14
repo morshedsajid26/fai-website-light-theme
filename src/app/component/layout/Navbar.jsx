@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -19,9 +19,16 @@ const Navbar = ({ className }) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.history.scrollRestoration = "manual";
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
+
   return (
     <Container
-      className={`bg-white/65 backdrop-blur-md shadow-sm border border-zinc-200/50 p-2 rounded-2xl w-full fixed top-4 left-1/2 -translate-x-1/2  z-50 ${className}`}
+      className={`bg-white/65 backdrop-blur-md shadow-sm border border-zinc-200/50 px-4 py-2 rounded-2xl fixed top-4 left-1/2 -translate-x-1/2  z-50 ${className}`}
     >
       <nav className="">
         <motion.div
@@ -42,7 +49,13 @@ const Navbar = ({ className }) => {
           >
             <Link
               href="/"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                setIsOpen(false);
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className="h-full flex items-center"
             >
               <Image
@@ -69,6 +82,12 @@ const Navbar = ({ className }) => {
                 >
                   <Link
                     href={item.path}
+                    onClick={(e) => {
+                      if (isActive) {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
                     className={`transition-colors duration-200 px-3 py-2 rounded-md text-lg xl:text-2xl font-bold font-space-grotesk ${
                       isActive
                         ? " bg-gradient-to-r from-[#E53022] to-[#F8A024] bg-clip-text text-transparent "
@@ -90,8 +109,16 @@ const Navbar = ({ className }) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <Link href="/contact">
-              <Button buttonText="Contact" />
+            <Link 
+              href="/contact"
+              onClick={(e) => {
+                if (pathname === "/contact") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+            >
+              <Button asDiv={true} buttonText="Contact" />
             </Link>
           </motion.div>
 
@@ -147,7 +174,13 @@ const Navbar = ({ className }) => {
                 <Link
                   key={index}
                   href={item.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    setIsOpen(false);
+                    if (isActive) {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
                   className={`transition-colors duration-200 px-3 py-3 rounded-md text-xl font-bold font-space-grotesk block text-center ${
                     isActive
                       ? " bg-zinc-100 border border-zinc-200"
@@ -167,8 +200,17 @@ const Navbar = ({ className }) => {
               );
             })}
             <div className="pt-4 flex justify-center w-full">
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
-                <Button buttonText="Contact" />
+              <Link 
+                href="/contact" 
+                onClick={(e) => {
+                  setIsOpen(false);
+                  if (pathname === "/contact") {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
+              >
+                <Button asDiv={true} buttonText="Contact" />
               </Link>
             </div>
           </div>

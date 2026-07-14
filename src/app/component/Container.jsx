@@ -2,7 +2,7 @@ import React from 'react'
 
 const Container = ({className,children}) => {
   return (
-    <div className={`max-w-[90%] mx-auto  ${className}`} >
+    <div className={`w-[92%] sm:w-[90%] md:max-w-[85%]  mx-auto ${className}`} >
       {children}
     </div>
   )

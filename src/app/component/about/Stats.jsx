@@ -132,13 +132,38 @@ const Stats = () => {
       <Container className={`pt-20`}>
         <section
           id="stats"
-          className="py-24 md:py-50 bg-[#E53022]/10  relative overflow-hidden rounded-4xl "
+          className="py-24 md:py-20   relative overflow-hidden rounded-4xl  "
         >
           {/* Background ambient glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(139,0,0,0.15)_0%,transparent_70%)] blur-[120px] pointer-events-none" />
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-0 max-w-7xl mx-auto">
+          <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
+            {/* Banner Content */}
+            <motion.div
+              className="z-30 w-full text-center relative mb-16 md:mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}
+            >
+              <h3 className="font-space-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-[#09090b] leading-[1.2]">
+                We are{" "}
+                <span className="bg-gradient-to-r from-[#E53022] to-[#F8A024] bg-clip-text text-transparent">
+                  Fire AI
+                </span>
+              </h3>
+              <motion.p
+                className="text-zinc-700 mt-6 font-poppins text-lg md:text-xl w-full  mx-auto"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: false }}
+              >
+               At Fire AI, we help businesses build smarter with AI-powered software and custom digital solutions. From AI agents, chatbots, and business automation to custom web and mobile applications, we create technology that streamlines operations, enhances customer experiences, and supports long-term growth.
+              </motion.p>
+            </motion.div>
+
+            <div className="flex flex-col lg:flex-row items-center justify-center py-20 gap-10 lg:gap-0 max-w- mx-auto w-full">
               {statsData.map((stat, index) => (
                 <StatSphere key={stat.id} stat={stat} index={index} />
               ))}

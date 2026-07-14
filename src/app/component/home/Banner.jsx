@@ -22,18 +22,18 @@ const Banner = () => {
         </video>
         <div className="absolute inset-0 bg-white/10 backdrop-blur-[2px] z-10 pointer-events-none"></div>
 
-        <Container className="relative z-20 h-full max-w-7xl mx-auto flex items-center justify-between">
+        <Container className="relative z-20 h-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between">
           <motion.div
-            className="w-[40%] flex flex-col items-start justify-center h-screen"
+            className="w-full lg:w-[50%] xl:w-[45%] flex flex-col items-start justify-center h-screen relative z-30"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h3 className="font-space-grotesk font-bold text-5xl text-[#ffffff]  leading-[1.2] ">
+            <h3 className="font-space-grotesk font-bold text-4xl md:text-5xl xl:text-[64px] text-[#ffffff] leading-[1.2]">
               AI Solutions That Transform Businesses
             </h3>
-            <p className="text-[#ffffff] mt-4 mb-10 font-popins text-xl">
+            <p className="text-[#ffffff] mt-4 mb-8 md:mb-10 font-popins text-lg md:text-xl xl:text-2xl w-full lg:w-[90%]">
               We build AI-powered web applications, intelligent automation
               systems, custom software, and modern digital experiences that help
               businesses increase productivity, reduce costs, and scale faster.
@@ -62,11 +62,11 @@ const Banner = () => {
               />
 
               <div>
-                <h4 className="text-[#ffffff] font-bold font-space-grotesk text-xl">
+                <h4 className="text-[#ffffff] font-bold font-space-grotesk text-lg md:text-xl">
                   12K+ Worldwide Clients
                 </h4>
 
-                <p className=" font-popins text-sm text-white mt-2 w-[70%]">
+                <p className=" font-popins text-sm md:text-base text-white mt-2 w-full lg:w-[80%]">
                   Trusted by startup, enterprises, and global brands in 40+
                   countries
                 </p>
@@ -75,7 +75,7 @@ const Banner = () => {
           </motion.div>
 
           {/* Right Side: 3D Robot Image */}
-          <div className="absolute right-0 top-0 w-[50%] h-full z-10 pointer-events-auto">
+          <div className="absolute right-0 top-0 w-full lg:w-[50%] h-full z-10 pointer-events-auto opacity-30 lg:opacity-100">
             <BannerThreeBg />
           </div>
         </Container>

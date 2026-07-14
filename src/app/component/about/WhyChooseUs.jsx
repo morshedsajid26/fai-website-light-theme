@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
   return (
-    <div className="py-30 overflow-hidden">
+    <div className="py-30 overflow-hidden bg-[#E76634]/5">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

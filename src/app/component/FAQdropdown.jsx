@@ -24,12 +24,14 @@ const FAQdropdown = ({ question, answer, className, isOpen, onToggle }) => {
       }}
       className="w-full flex justify-center"
     >
-      <div className={`md:w-[80%] w-full rounded-xl transition-all duration-300 ${isDropdownOpen ? "bg-gradient-to-r from-[#E53022] to-[#F8A024] p-[1px]" : "bg-transparent p-[1px]"} ${className}`}>
+      <div
+        className={`md:w-[80%] w-full rounded-xl transition-all duration-300 ${isDropdownOpen ? "bg-gradient-to-r from-[#E53022] to-[#F8A024] p-[1px]" : "bg-transparent p-[1px]"} ${className}`}
+      >
         <div
           onClick={handleToggle}
-          className={`cursor-pointer px-6 md:px-8 bg-white rounded-[10.5px] transition-all duration-300 h-full w-full border ${isDropdownOpen ? 'border-transparent' : 'border-black/10'}`}
+          className={`cursor-pointer px-6 md:px-8 bg-[#fafaf9] rounded-[10.5px] transition-all duration-300 h-full w-full border ${isDropdownOpen ? "border-transparent" : "border-black/10"}`}
         >
-          <div className="up flex items-center justify-between py-4 md:py-[25.5px]">
+          <div className="up flex items-center justify-between gap-4 py-4 md:py-[25.5px]">
             <h4 className="text-[#09090b] text-lg md:text-3xl font-poppins">
               {question}
             </h4>

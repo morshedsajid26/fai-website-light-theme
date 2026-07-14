@@ -21,8 +21,8 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="pt-">
-      <div className="bg-white border border-zinc-200 shadow-md p-6 md:p-10 rounded-3xl relative overflow-hidden w-full">
+    <footer className="">
+      <div className="bg-[#E76634]/5 border border-zinc-200 shadow-md p-6 md:p-10 rounded-3xl relative overflow-hidden w-full">
         {/* Background Watermark Logo */}
         <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-10">
           <motion.div

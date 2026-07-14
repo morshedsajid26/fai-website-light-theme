@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const WhoWeAre = () => {
   return (
-    <div className="pt-20 overflow-hidden">
+    <div className="py-20 overflow-hidden bg-[#E76634]/5">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,7 +24,7 @@ const WhoWeAre = () => {
 
         <div className="grid grid-cols-12 gap-10 mt-15">
           <motion.div
-            className="col-span-12 lg:col-span-6 grid grid-cols-2 gap-4 lg:gap-6 min-h-[400px] lg:min-h-[500px]"
+            className="col-span-12 lg:col-span-6 grid grid-cols-2 gap-4 lg:gap-6 min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -36,7 +36,7 @@ const WhoWeAre = () => {
                 alt="office1"
                 fill
                 quality={100}
-                className="object-cover rounded-2xl"
+                className="object-cover rounded-tr-[100px] rounded-tl-2xl rounded-bl-[100px] rounded-br-2xl"
               />
             </div>
             <div className="flex flex-col gap-4 lg:gap-6 h-full">
@@ -46,7 +46,7 @@ const WhoWeAre = () => {
                   alt="office2"
                   fill
                   quality={100}
-                  className="object-cover rounded-2xl"
+                  className="object-cover rounded-tr-[100px] rounded-tl-2xl rounded-bl-[100px] rounded-br-2xl"
                 />
               </div>
               <div className="relative w-full h-1/2">
@@ -55,7 +55,7 @@ const WhoWeAre = () => {
                   alt="office3"
                   fill
                   quality={100}
-                  className="object-cover rounded-2xl"
+                  className="object-cover rounded-tl-[100px] rounded-tr-2xl rounded-br-[100px] rounded-bl-2xl"
                 />
               </div>
             </div>
@@ -90,8 +90,8 @@ const WhoWeAre = () => {
                   Applications, UI/UX Design, CMS Development (WordPress,
                   Shopify & Wix), Google Ads Management, and Business Process
                   Automation,
-                </span>
-                {" "}providing businesses with end-to-end digital transformation
+                </span>{" "}
+                providing businesses with end-to-end digital transformation
                 under one roof.
               </p>
               <p>

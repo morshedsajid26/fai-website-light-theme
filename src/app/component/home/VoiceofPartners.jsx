@@ -202,7 +202,7 @@ const VoiceofPartners = () => {
         <div className="w-full flex overflow-hidden">
           <div className="flex w-max shrink-0 animate-marquee-ltr">
             {[...row1Partners, ...row1Partners].map((partner, idx) => (
-              <div key={idx} className="py-4 w-[350px] md:w-[500px] lg:w-[600px]">
+              <div key={idx} className="py-4 w-[300px] sm:w-[350px] md:w-[500px] lg:w-[600px]">
                 <Card
                   name={partner.name}
                   nationality={partner.nationality}
@@ -217,7 +217,7 @@ const VoiceofPartners = () => {
         <div className="w-full flex overflow-hidden">
           <div className="flex w-max shrink-0 animate-marquee-rtl">
             {[...row2Partners, ...row2Partners].map((partner, idx) => (
-              <div key={idx} className="py-4 w-[350px] md:w-[500px] lg:w-[600px]">
+              <div key={idx} className="py-4 w-[300px] sm:w-[350px] md:w-[500px] lg:w-[600px]">
                 <Card
                   name={partner.name}
                   nationality={partner.nationality}

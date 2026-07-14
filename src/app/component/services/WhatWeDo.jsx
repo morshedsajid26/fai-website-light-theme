@@ -155,7 +155,7 @@ const LaptopSlider = ({ image }) => {
 
 const WhatWeDo = () => {
   return (
-    <div className="py-24 bg-[#f7f8f9]">
+    <div className="py-24 bg-[#fafaf9]">
       <Container>
         <Header
           titleText="What We Do?"

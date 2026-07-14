@@ -38,6 +38,7 @@ const servicesData = [
   {
     id: "01",
     displayId: "02",
+    mobileOrder: "order-2 md:order-none",
     title: "App Development",
     desc: "We build powerful, scalable, and high-performance mobile apps for iOS & Android.",
     Icon: FaMobileAlt,
@@ -46,6 +47,7 @@ const servicesData = [
   {
     id: "02",
     displayId: "01",
+    mobileOrder: "order-1 md:order-none",
     title: "AI Automation",
     desc: "Automate workflows, save time, and increase productivity with intelligent AI solutions.",
     Icon: FaRobot,
@@ -53,6 +55,7 @@ const servicesData = [
   },
   {
     id: "03",
+    mobileOrder: "order-3 md:order-none",
     title: "Web Development",
     desc: "Fast, secure, and modern websites & web applications that drive real business.",
     Icon: FaLaptopCode,
@@ -60,14 +63,16 @@ const servicesData = [
   },
   {
     id: "04",
+    mobileOrder: "order-4 md:order-none",
     title: "UI/UX Design",
     desc: "We create intuitive, beautiful and user-centered designs that users love.",
     Icon: FaPaintBrush,
     color: "#ec4899",
   },
-  { id: "center", isCenter: true },
+  { id: "center", isCenter: true, mobileOrder: "order-6 md:order-none" },
   {
     id: "05",
+    mobileOrder: "order-5 md:order-none",
     title: "WordPress",
     desc: "Custom WordPress websites that are flexible, SEO-friendly and easy to manage.",
     Icon: FaWordpress,
@@ -75,6 +80,7 @@ const servicesData = [
   },
   {
     id: "06",
+    mobileOrder: "order-7 md:order-none",
     title: "Wix",
     desc: "Modern, responsive websites built with Wix — fast, beautiful and conversion focused.",
     Icon: FaWix,
@@ -82,6 +88,7 @@ const servicesData = [
   },
   {
     id: "07",
+    mobileOrder: "order-8 md:order-none",
     title: "Shopify",
     desc: "Build stunning Shopify stores that convert visitors into loyal customers.",
     Icon: FaShopify,
@@ -89,6 +96,7 @@ const servicesData = [
   },
   {
     id: "08",
+    mobileOrder: "order-9 md:order-none",
     title: "Google Ads",
     desc: "Get more leads and sales with data-driven Google Ads campaigns that perform.",
     Icon: GoogleAdsOriginalIcon,
@@ -97,6 +105,7 @@ const servicesData = [
   {
     id: "09",
     displayId: "10",
+    mobileOrder: "order-11 md:order-none",
     title: "YouTube Ads",
     desc: "Drive video views and conversions with highly targeted YouTube campaigns.",
     Icon: FaYoutube,
@@ -105,6 +114,7 @@ const servicesData = [
   {
     id: "10",
     displayId: "09",
+    mobileOrder: "order-10 md:order-none",
     title: "Meta Ads",
     desc: "Reach the right audience and grow your business with high-converting Meta ads.",
     Icon: FaFacebook,
@@ -460,7 +470,7 @@ const WhatWeDo = () => {
                 return (
                   <div
                     key={item.id}
-                    className="flex items-center justify-center relative py-12 lg:py-0 h-[220px] lg:h-full lg:row-span-2 "
+                    className={`flex items-center justify-center relative py-12 lg:py-0 h-[220px] lg:h-full lg:row-span-2 ${item.mobileOrder || ""}`}
                   >
                     {/* Background mask to hide lines underneath via z-index */}
                     <div className="absolute w-[198px] h-[198px] bg-[#fafaf9] rounded-full z-0" />
@@ -527,7 +537,7 @@ const WhatWeDo = () => {
                   key={item.id}
                   className={`w-full h-full ${
                     item.id === "02" ? "lg:-translate-y-32" : ""
-                  } ${item.id === "09" ? "lg:translate-y-32" : ""}`}
+                  } ${item.id === "09" ? "lg:translate-y-32" : ""} ${item.mobileOrder || ""}`}
                 >
                   <motion.div
                     ref={(el) => measureNode(item.id, el)}
@@ -537,11 +547,11 @@ const WhatWeDo = () => {
                     className="bg-white rounded-[24px] lg:rounded-[32px] p-4 pr-5 shadow-[0_8px_30px_rgba(255,78,39,0.06)] border border-[#ff4e27]/5 flex items-center gap-4 hover:-shadow-lg transition-all duration-300 relative group z-10 w-full hover:-translate-y-2"
                   >
                     {/* Icon Container with specific squircle/rounded box style */}
-                    <div className="w-[84px] h-[84px] flex-shrink-0 rounded-[20px] bg-gradient-to-br from-[#fff4f0] to-[#ffe8e0] flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)] border border-white group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-[64px] h-[64px] md:w-[84px] md:h-[84px] flex-shrink-0 rounded-[16px] md:rounded-[20px] bg-gradient-to-br from-[#fff4f0] to-[#ffe8e0] flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)] border border-white group-hover:scale-110 transition-transform duration-300">
                       {item.Icon && (
                         <item.Icon
-                          size={38}
-                          className="drop-shadow-sm"
+                          size={32}
+                          className="drop-shadow-sm md:w-[38px] md:h-[38px] w-[28px] h-[28px]"
                           style={{ color: item.color }}
                         />
                       )}

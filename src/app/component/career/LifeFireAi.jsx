@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const LifeFireAi = () => {
   return (
-    <section className="pt-20 ">
+    <section className="py-20 bg-[#fafaf9]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
@@ -38,7 +38,7 @@ const LifeFireAi = () => {
             viewport={{ once: false, amount: 0.2 }}
           >
             {/* Top Wide Image */}
-            <div className="relative w-full h-[220px] sm:h-[350px] lg:h-[280px] xl:h-[350px] rounded-[28px] overflow-hidden">
+            <div className="relative w-full h-[220px] sm:h-[350px] lg:h-[280px] xl:h-[350px] rounded-tr-[100px] rounded-tl-2xl rounded-bl-[100px] rounded-br-2xl overflow-hidden">
               <Image
                 src="/office1.png"
                 alt="Fire AI Office Overview"
@@ -50,7 +50,7 @@ const LifeFireAi = () => {
 
             {/* Bottom Two Images */}
             <div className="grid grid-cols-2 gap-4 sm:gap-5">
-              <div className="relative h-[160px] sm:h-[260px] lg:h-[200px] xl:h-[260px] rounded-[28px] overflow-hidden">
+              <div className="relative h-[160px] sm:h-[260px] lg:h-[200px] xl:h-[260px] rounded-tr-[100px] rounded-tl-2xl rounded-bl-[100px] rounded-br-2xl overflow-hidden">
                 <Image
                   src="/office2.png"
                   alt="Developer working at Fire AI"
@@ -59,7 +59,7 @@ const LifeFireAi = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="relative h-[160px] sm:h-[260px] lg:h-[200px] xl:h-[260px] rounded-[28px] overflow-hidden">
+              <div className="relative h-[160px] sm:h-[260px] lg:h-[200px] xl:h-[260px] rounded-tl-[100px] rounded-tr-2xl rounded-br-[100px] rounded-bl-2xl overflow-hidden">
                 <Image
                   src="/office3.png"
                   alt="Team collaboration at Fire AI"

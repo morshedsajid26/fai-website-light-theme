@@ -46,9 +46,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${poppins.variable} ${istokWeb.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#fafafa] text-[#09090b]">
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-[#fafafa] text-[#09090b]">
         <Loader>
           <Navbar />
           {children}

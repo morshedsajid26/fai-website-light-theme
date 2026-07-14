@@ -59,7 +59,7 @@ const reasons = [
 
 const WhyWork = () => {
   return (
-    <section className="py-20 ">
+    <section className="py-20 bg-[#E76634]/5">
       <Container>
         <motion.div
           className="text-center mb-16"

@@ -33,7 +33,7 @@ const Projects = () => {
   const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-[#fafaf9]">
       <Container>
         {/* Filter Tabs Container */}
         <div className="flex flex-nowrap md:flex-wrap items-center justify-start md:justify-center gap-2 bg-zinc-100/50 border border-zinc-200 p-2 rounded-2xl mb-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
@@ -71,7 +71,8 @@ const Projects = () => {
                 className="bg-white rounded-[24px] overflow-hidden border border-zinc-200 shadow-sm group"
               >
                 <Link
-                  href={`/portfolio/${project.id}`}
+                  // href={`/portfolio/${project.id}`}
+                  href={"#"}
                   className="block w-full h-full cursor-pointer group-hover:border-[#FF4400]/50 transition-colors"
                 >
                   {/* Project Thumbnail */}

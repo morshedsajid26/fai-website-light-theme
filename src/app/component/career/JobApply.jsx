@@ -8,107 +8,54 @@ import Container from "../Container";
 const jobPostings = [
   {
     id: 1,
-    title: "UI/UX Designer",
-    location: "Remote",
+    title: "Sales Executive",
+    location: "Dhaka",
     type: "Full-time",
-    experience: "3+ Years",
-    salary: "$40k - $70k / year",
+    experience: "1+ Years",
+    salary: "Negotiable",
     about:
-      "Join our design team to create stunning user interfaces. You will be working closely with our product and engineering teams to deliver the best possible user experience.",
+      "We are looking for a driven Sales Executive to join our team. You will be responsible for driving business growth, building client relationships, and closing sales deals in the digital technology sector.",
     responsibilities: [
-      "Create wireframes, user flows, process flows and site maps.",
-      "Execute all visual design stages from concept to final hand-off.",
-      "Conceptualize original ideas that bring simplicity and user friendliness to complex design roadblocks.",
-      "Establish and promote design guidelines, best practices and standards.",
+      "Identify and generate new business opportunities through networking and outreach.",
+      "Pitch our AI automation and software development services to potential clients.",
+      "Build and maintain strong, long-lasting client relationships.",
+      "Achieve and exceed monthly and quarterly sales targets.",
     ],
     requirements: [
-      "Proven UI experience.",
-      "Solid experience in creating wireframes, storyboards, user flows, process flows and site maps.",
-      "Proficiency in Figma or other visual design and wire-framing tools.",
-      "Excellent visual design skills with sensitivity to user-system interaction.",
+      "Proven experience as a Sales Executive or in a relevant sales role.",
+      "Excellent communication, negotiation, and presentation skills.",
+      "Strong understanding of digital products (web, app, AI solutions).",
+      "Ability to work independently and as part of a team.",
     ],
     niceToHave: [
-      "Experience with Next.js or React.",
-      "Knowledge of HTML/CSS and frontend basics.",
+      "Experience in B2B sales in the IT/Software industry.",
+      "Familiarity with CRM software.",
     ],
   },
   {
     id: 2,
-    title: "APP Developer (Flutter)",
+    title: "Google Ads Specialist",
     location: "Remote",
     type: "Full-time",
-    experience: "3+ Years",
-    salary: "$50k - $80k / year",
+    experience: "2+ Years",
+    salary: "Negotiable",
     about:
-      "Join our mobile team to build beautiful, responsive applications for iOS and Android.",
+      "Join our marketing team as a Google Ads Specialist. You will be responsible for planning, creating, and managing Google Ads campaigns to drive high-quality leads and maximize ROI for our clients.",
     responsibilities: [
-      "Develop new user-facing features using Flutter.",
-      "Build reusable components and front-end libraries for future use.",
-      "Ensure the technical feasibility of UI/UX designs.",
-      "Optimize application for maximum speed and scalability.",
+      "Create, manage, and optimize Google Ads campaigns (Search, Display, Video, Performance Max).",
+      "Perform keyword research, competitor analysis, and audience targeting.",
+      "Monitor budgets and adjust bids to gain better ROI.",
+      "Generate performance reports and present insights to the team.",
     ],
     requirements: [
-      "Strong proficiency in Dart.",
-      "Thorough understanding of Flutter and its core principles.",
-      "Experience with popular state management solutions (e.g., Provider, Riverpod, BLoC).",
-      "Familiarity with RESTful APIs.",
+      "Proven experience in managing successful Google Ads campaigns.",
+      "Strong analytical skills and experience with Google Analytics.",
+      "Understanding of conversion tracking and landing page optimization.",
+      "Up-to-date with the latest trends and best practices in search engine marketing.",
     ],
     niceToHave: [
-      "Experience with native Android/iOS development.",
-      "Published applications on App Store / Play Store.",
-    ],
-  },
-  {
-    id: 3,
-    title: "Frontend Developer (React)",
-    location: "Dhaka",
-    type: "Full-time",
-    experience: "3+ Years",
-    salary: "$50k - $80k / year",
-    about:
-      "Join our frontend team to build beautiful, responsive, and performant user interfaces. You will be working with React, TypeScript, and Tailwind CSS.",
-    responsibilities: [
-      "Develop new user-facing features using React.js.",
-      "Build reusable components and front-end libraries for future use.",
-      "Translate designs and wireframes into high-quality code.",
-      "Optimize components for maximum performance across a vast array of web-capable devices and browsers.",
-    ],
-    requirements: [
-      "Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model.",
-      "Thorough understanding of React.js and its core principles.",
-      "Experience with popular React.js workflows (such as Flux or Redux).",
-      "Familiarity with RESTful APIs.",
-    ],
-    niceToHave: [
-      "Experience with Next.js.",
-      "Knowledge of modern authorization mechanisms, such as JSON Web Token.",
-      "Familiarity with modern front-end build pipelines and tools.",
-    ],
-  },
-  {
-    id: 4,
-    title: "AI Engineer (Python / LLM)",
-    location: "Remote",
-    type: "Full-time",
-    experience: "3+ Years",
-    salary: "$80k - $120k / year",
-    about:
-      "Join our AI team to build innovative solutions using cutting-edge LLMs and machine learning techniques.",
-    responsibilities: [
-      "Design and implement AI models and pipelines.",
-      "Fine-tune and deploy Large Language Models.",
-      "Collaborate with backend engineers to integrate AI models into production systems.",
-      "Stay up-to-date with the latest advancements in AI/ML.",
-    ],
-    requirements: [
-      "Strong proficiency in Python.",
-      "Experience with machine learning frameworks like PyTorch or TensorFlow.",
-      "Solid understanding of NLP and LLM architectures.",
-      "Experience in deploying machine learning models in production.",
-    ],
-    niceToHave: [
-      "Experience with Hugging Face transformers.",
-      "Experience with cloud platforms like AWS or GCP.",
+      "Google Ads Certification.",
+      "Experience with Meta Ads or other PPC platforms.",
     ],
   },
 ];
@@ -119,7 +66,7 @@ const JobApply = () => {
   const selectedJob = jobPostings.find((job) => job.id === selectedJobId);
 
   return (
-    <section className=" text-[#09090b] py-16 min-h-screen relative overflow-hidden flex flex-col items-center">
+    <section className=" text-[#09090b] py-16  relative overflow-hidden flex flex-col items-center bg-[#fafaf9]">
       <Container className={`w-full`}>
         <div className="  px-4 sm:px-6 lg:px-8 z-10 relative">
           <motion.div
@@ -218,7 +165,7 @@ const JobApply = () => {
               </button>
 
               <div className="p-8 pb-0 border-b border-zinc-200/50 relative">
-                <h2 className="text-3xl font-bold text-[#09090b] mb-4 pr-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#09090b] mb-4 pr-10">
                   {selectedJob.title}
                 </h2>
                 <div className="flex flex-wrap items-center gap-3 text-sm text-zinc-500 mb-6">

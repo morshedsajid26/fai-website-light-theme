@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <div>
       <div
-        className={`bg-[url('/aboutBanner.png')] bg-cover bg-center bg-no-repeat w-full py-[280px] px-6 relative after:absolute after:inset-0 after:bg-white/70 after:backdrop-blur-[2px] after:z-10   `}
+        className={`bg-[url('/aboutBanner.png')] bg-cover bg-center bg-no-repeat w-full py-40 md:py-[200px] lg:py-[280px] px-6 relative after:absolute after:inset-0 after:bg-white/70 after:backdrop-blur-[2px] after:z-10   `}
       >
         <motion.div
           className="z-30 w-full text-center relative"
@@ -19,14 +19,14 @@ const Banner = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}
         >
-          <h3 className="font-space-grotesk font-bold text-5xl text-[#09090b]  leading-[1.2] ">
+          <h3 className="font-space-grotesk font-bold text-4xl md:text-5xl text-[#09090b] leading-[1.2]">
             We are{" "}
             <span className="bg-gradient-to-r from-[#E53022] to-[#F8A024] bg-clip-text text-transparent">
               Fire AI
             </span>
           </h3>
           <motion.p
-            className="text-zinc-700 mt-4 mb-10 font-popins text-xl w-[60%] mx-auto"
+            className="text-zinc-700 mt-4 mb-10 font-popins text-base md:text-lg lg:text-xl w-full md:w-[80%] lg:w-[60%] mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}

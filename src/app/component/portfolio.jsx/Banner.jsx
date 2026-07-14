@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <div>
-      <div className="py-[280px] text-center relative overflow-hidden bg-[url('/portfolioBanner.png')] bg-cover bg-center bg-no-repeat">
+      <div className="py-40 md:py-[200px] lg:py-[280px] text-center relative overflow-hidden bg-[url('/portfolioBanner.png')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px] z-10 pointer-events-none"></div>
 
         <motion.div
