@@ -5,7 +5,7 @@ export const projectsData = [
     title: "POMBOM AI Social Media APP",
     description: "This project involves the development of a next-generation AI-powered short-video platform centered around a unique 5-second video format designed to deliver fast, addictive, and highly engaging content experiences. The platform will combine short-form video entertainment with AI-driven creation tools, gamification systems, and multi-channel monetization features to create a modern ecosystem for both users and content creators. Users will be able to watch autoplay video feeds and interact through likes, comments, shares, gifts, challenges, streaks, and leaderboards, while creators can record, edit, and publish short videos using built-in AI tools such as Voice-to-Video, AI Avatars, Remix Studio, Highlight Finder, and Viral Mode. The platform will also support monetization through ads, fan gifts, tokens, sponsored challenges, and shoppable clips, enabling creators and the platform to grow together. In addition, the system will include advanced content protection mechanisms such as AI fingerprinting, theft detection, revenue locking, and automatic backup systems to ensure creator ownership and security. With scalable backend infrastructure, mobile and web applications, payment integration, and a powerful admin dashboard for analytics, moderation, and monetization management, the platform is designed to deliver a highly interactive, secure, and globally scalable short-video ecosystem capable of competing with modern social media platforms.",
     category: "AI Powered Mobile APP",
-    image: "/UIUX.png",
+    image: "/PopBomCover.jpg",
     tags: ["AI", "Mobile App", "Social Media"],
     link: "http://figma.com/design/32hB5y9SO0HTx9NJ5MysK6/PopBom"
   },
@@ -14,7 +14,7 @@ export const projectsData = [
     title: "Drivest AI Car App",
     description: "The project involves developing a mobile app and a website integrated with an AI agent/chatbot for the client. The goal is to create a digital platform where users can interact with the system through both a web interface and a mobile application, while an AI-powered assistant helps automate communication or support tasks.",
     category: "AI Powered Mobile APP",
-    image: "/UIUX.png",
+    image: "/DrivestCover.jpg",
     tags: ["AI Chatbot", "Mobile App", "Web Interface"],
     link: "https://www.figma.com/design/6fa2ryuWBV3yXDMhCVQkz3/Drivest"
   },
@@ -50,7 +50,7 @@ export const projectsData = [
     title: "Agricultural SOP Management SaaS App",
     description: "This project involves the design and development of a SaaS-based mobile application (iOS & Android) for agricultural companies to manage, distribute, and maintain Standard Operating Procedures (SOPs) in a structured, accessible, and scalable manner. The platform is designed primarily for dairy farming operations, with a clear architectural foundation that allows future expansion into other agricultural sectors such as pig farming. The system focuses on simplicity, offline accessibility, multilingual support, and subscription-based usage tailored to farm size. The application will be free to download from the App Store and Google Play. Access to features will be controlled via company-level subscriptions, not employee payments.",
     category: "AI Powered Mobile APP",
-    image: "/UIUX.png",
+    image: "/SoPcover.jpg",
     tags: ["SaaS", "Mobile App", "Agriculture"],
     link: "https://www.figma.com/design/7EiMIDOZFcqrcY9gesZ7PM/SOP-Management"
   },
@@ -61,7 +61,7 @@ export const projectsData = [
     title: "Timesheet Management System Website and App",
     description: "This project involves the modernization of an existing Spring Boot + MySQL timesheet management system into a scalable hybrid solution with responsive web and mobile applications. The system is designed to provide role-based access for admins, supervisors, and Users with features including timesheet management, scheduling, approval workflows, revenue tracking, holiday management, reporting, and analytics dashboards. Users will be able to submit weekly and monthly timesheets and upload supporting files and track schedules, holidays, and approvals, while supervisors and admins can review, approve, reject, and manage workflows efficiently. The platform will also support revenue and expense calculations, consultant performance tracking, Stripe payment integration, email notifications, export systems, and audit logging. With React Native mobile apps, React.js web dashboard, RESTful APIs, secure authentication, and scalable cloud deployment, the system is designed to deliver a clean, fast, secure, and globally scalable timesheet management experience for organizations and consultants.",
     category: "Custom Website Development",
-    image: "/UIUX.png",
+    image: "/Timesheet Management System Cover.jpg",
     tags: ["React Native", "React.js", "System Modernization"],
     link: "https://www.figma.com/design/jlVsHMuPVrpTyjqRbLuHt9/Naresh-Vyas"
   },
@@ -70,7 +70,7 @@ export const projectsData = [
     title: "Aminpass",
     description: "The platform aims to modernize traditional loyalty systems by replacing physical cards with secure, dynamic, digital loyalty passes. Businesses can engage customers in real time, reward their behavior, and improve retention using automated analytics-driven tools. The long-term vision is to build a subscription-based SAAS product that any business can register for and instantly create its own branded digital loyalty ecosystem.",
     category: "Custom Website Development",
-    image: "/UIUX.png",
+    image: "/AminpassCover.jpg",
     tags: ["SaaS", "Loyalty System", "Web Platform"],
     link: "https://www.figma.com/design/HHIZI6g7gsiU8LlVAEJNC1/Belbaida"
   },
@@ -79,7 +79,7 @@ export const projectsData = [
     title: "AI Video Chat Platform",
     description: "This quotation outlines the scope, timeline, and milestone-based payment structure for the AI Video Chat Platform MVP. The MVP will demonstrate real-time interaction between users and an AI avatar through video and voice integration.",
     category: "Custom Website Development",
-    image: "/UIUX.png",
+    image: "/Irakicover.jpg",
     tags: ["AI Avatar", "Video Chat", "Web Platform"],
     link: "https://www.figma.com/design/gjbXD33T09yceMRT5LOxbl/AI-Video-Chat-Platform_-MVP"
   },
@@ -88,7 +88,7 @@ export const projectsData = [
     title: "MyScholarHack",
     description: "MyScholarHack will be a web-based scholarship essay coaching and application-tracking platform designed for U.S. high school and college students. Instead of functioning as a large scholarship search engine, the MVP will focus on delivering a smarter, more personal essay-writing experience powered by AI that learns and adapts to each student’s natural writing voice. Students will be able to Generate first-draft essays, receive targeted coaching on existing essays, and refine their writing through guided improvements while avoiding common “AI-sounding” patterns. The platform will also include a user dashboard, multi-step profile, application tracker with deadline reminders, and a curated selection of “hidden gem” scholarships. MyScholarHack will operate as a subscription-based SaaS website with multiple pricing tiers, Stripe billing, and an admin panel for managing users, subscriptions, and curated scholarship entries. The goal is to give students and parents a simple, reliable, and time-saving tool to help them produce stronger scholarship applications and stay organized throughout the process.",
     category: "Custom Website Development",
-    image: "/UIUX.png",
+    image: "/My Scholar Hack Website Cover.jpg",
     tags: ["SaaS", "AI Coaching", "Web Application"],
     link: "https://www.figma.com/design/SSwc5KhtIHHf5Qsi9ehweA/Scholar"
   },
@@ -106,7 +106,7 @@ export const projectsData = [
     title: "Agricultural SOP Management SaaS App",
     description: "This project involves the design and development of a SaaS-based mobile application (iOS & Android) for agricultural companies to manage, distribute, and maintain Standard Operating Procedures (SOPs) in a structured, accessible, and scalable manner. The platform is designed primarily for dairy farming operations, with a clear architectural foundation that allows future expansion into other agricultural sectors such as pig farming. The system focuses on simplicity, offline accessibility, multilingual support, and subscription-based usage tailored to farm size. The application will be free to download from the App Store and Google Play. Access to features will be controlled via company-level subscriptions, not employee payments.",
     category: "Custom Website Development",
-    image: "/UIUX.png",
+    image: "/SoPcover.jpg",
     tags: ["SaaS", "Mobile App", "Agriculture"],
     link: "https://www.figma.com/design/7EiMIDOZFcqrcY9gesZ7PM/SOP-Management"
   },
@@ -207,7 +207,7 @@ export const projectsData = [
     title: "AI Custom Playlist",
     description: "The goal of this project is to build a Party/Wedding Vibe Quiz web application that turns quiz answers into personalized Spotify playlists using OpenAI. Users will take a short quiz, and the system will automatically generate a unique playlist, embed it, and capture their information in a database. A premium 50-track upgrade is available, which includes an automated Wedding Entertainment Guide PDF delivered by email. The project will be delivered in two phases: Phase 1 covers backend and API integrations, and Phase 2 includes a modern, mobile-friendly frontend, Stripe payment integration, PDF delivery, and final deployment. The final system will come with documentation, a Loom walkthrough, and 120 days of post-launch support.",
     category: "AI Agent / Automation / AI Powered Website",
-    image: "/UIUX.png",
+    image: "/sound-track-ai-spotify-playlist-generator_cover.jpg",
     tags: ["OpenAI", "Spotify API", "Web Application"],
     link: "https://www.figma.com/design/xRwJhJoU3Z7fVKQa6Tm5qs/Untitled"
   },
@@ -234,7 +234,7 @@ export const projectsData = [
     title: "AI Phone Assistant (Ubreakfix)",
     description: "The AI Phone Assistant is a smart, automated system designed to answer customer calls for UBreakiFix stores during off-hours or when staff availability is limited. The system uses the client’s existing phone scripts and repair price sheets to provide accurate, friendly, and professional responses. The assistant can handle inquiries about repair costs for cell phones, tablets, game consoles, and computer software issues. For complex problems that require technician intervention, the AI can perform a warm transfer to live staff.",
     category: "AI Agent / Automation / AI Powered Website",
-    image: "/UIUX.png",
+    image: "/UBREAKFIX SHOP Dashboard Overview.jpg",
     tags: ["Voice AI", "Automation", "Customer Support"],
     link: "https://www.figma.com/design/9dvwDSeojTcOfPyZmQPh7L/Ubreakfix"
   },

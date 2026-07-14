@@ -559,7 +559,7 @@ const WhatWeDo = () => {
 
                     {/* Text Content */}
                     <div className="flex-1 py-1">
-                      <div className="text-[#ff4e27] font-bold text-sm mb-1 leading-none opacity-50">
+                      <div className="text-[#ff4e27] font-bold text-md mb-1 leading-none opacity-50">
                         {item.displayId || item.id}
                       </div>
                       <h4 className="text-[17px] font-bold text-[#09090b] mb-1.5 font-space-grotesk leading-tight tracking-tight">
