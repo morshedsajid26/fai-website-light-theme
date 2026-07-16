@@ -36,7 +36,7 @@ const Projects = () => {
     <section className="py-20 bg-[#fafaf9]">
       <Container>
         {/* Filter Tabs Container */}
-        <div className="flex flex-nowrap md:flex-wrap items-center justify-start md:justify-center gap-2 bg-zinc-100/50 border border-zinc-200 p-2 rounded-2xl mb-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 bg-zinc-100/50 border border-zinc-200 p-1.5 sm:p-2 rounded-2xl md:rounded-full mb-10 md:mb-12 w-full">
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeCategory === cat.label;
@@ -44,21 +44,21 @@ const Projects = () => {
               <button
                 key={cat.id}
                 onClick={() => handleCategoryChange(cat.label)}
-                className={`flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm md:text-base font-medium transition-colors duration-300 flex-1 min-w-max font-poppins ${
+                className={`flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 md:py-3 rounded-xl md:rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 flex-grow sm:flex-grow-0 text-center ${
                   isActive
-                    ? "bg-gradient-to-r from-[#E53022] to-[#F8A024] text-white shadow-lg"
-                    : "text-zinc-600 hover:text-[#09090b] hover:bg-zinc-200"
+                    ? "bg-gradient-to-r from-[#E53022] to-[#F8A024] text-white shadow-md"
+                    : "text-zinc-600 hover:text-[#09090b] hover:bg-zinc-200/80"
                 }`}
               >
-                <Icon className="text-lg" />
-                <span className="whitespace-nowrap">{cat.label}</span>
+                <Icon className="text-base sm:text-lg shrink-0" />
+                <span className="whitespace-normal sm:whitespace-nowrap leading-tight">{cat.label}</span>
               </button>
             );
           })}
         </div>
 
         {/* Projects Grid with Framer Motion filtering */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <AnimatePresence mode="popLayout">
             {visibleProjects.map((project) => (
               <motion.div
