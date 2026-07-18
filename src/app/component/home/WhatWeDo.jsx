@@ -473,43 +473,50 @@ const WhatWeDo = () => {
                     className={`flex items-center justify-center relative py-12 lg:py-0 h-[220px] lg:h-full lg:row-span-2 ${item.mobileOrder || ""}`}
                   >
                     {/* Background mask to hide lines underneath via z-index */}
-                    <div className="absolute w-[198px] h-[198px] bg-[#fafaf9] rounded-full z-0" />
+                    <div className="absolute w-[200px] h-[200px] bg-[#fafaf9] rounded-full z-0" />
 
-                    {/* Softer background glow */}
-                    <div className="absolute w-[180px] h-[180px] bg-[#ff4e27] rounded-full blur-[50px] opacity-30 animate-pulse pointer-events-none z-0" />
+                    <svg viewBox="0 0 240 240" className="absolute w-[200px] h-[200px] z-10 overflow-visible pointer-events-none">
+                      <defs>
+                        {/* Red glow filter */}
+                        <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
+                          <feGaussianBlur stdDeviation="4" result="blur" />
+                          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                        {/* Center soft glow gradient */}
+                        <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+                          <stop offset="0%" stopColor="#f8a024" stopOpacity="0.15" />
+                          <stop offset="70%" stopColor="#f8a024" stopOpacity="0.05" />
+                          <stop offset="100%" stopColor="#f8a024" stopOpacity="0" />
+                        </radialGradient>
+                      </defs>
 
-                    {/* Dashed outer ring - opaque */}
-                    <div
-                      className="absolute w-[200px] h-[200px] rounded-full border-[1.5px] border-dashed border-[#ff4e27] animate-[spin_15s_linear_infinite] z-10"
-                      style={{ boxShadow: "0 0 15px rgba(255,78,39,0.15)" }}
-                    />
+                      {/* Center Soft Glow */}
+                      <circle cx="120" cy="120" r="50" fill="url(#centerGlow)" />
 
-                    {/* Solid glowing inner ring - softer */}
-                    <div className="absolute w-[150px] h-[150px] rounded-full border-[2px] border-[#ff4e27]/60 shadow-[0_0_15px_rgba(255,78,39,0.4),inset_0_0_10px_rgba(255,78,39,0.2)]" />
+                      {/* Outer Dashed Ring */}
+                      <circle cx="120" cy="120" r="105" fill="none" stroke="#f8a024" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.6" className="origin-center animate-[spin_20s_linear_infinite_reverse]" />
+                      
+                      {/* Red Glowing Ring */}
+                      <circle cx="120" cy="120" r="85" fill="none" stroke="#ff4e27" strokeWidth="1.5" opacity="0.4" filter="url(#redGlow)" />
+                      <circle cx="120" cy="120" r="85" fill="none" stroke="#ff4e27" strokeWidth="1" opacity="0.6" />
 
-                    {/* Center Logo Node - Glossy & Thick but softer shadow */}
+                      {/* Inner thin solid ring */}
+                      <circle cx="120" cy="120" r="63" fill="none" stroke="#F8A024" strokeWidth="0.5" opacity="0.5" />
+
+                      {/* Spinning Arcs (Loader style) - SVG allows perfect rounded caps */}
+                      <circle cx="120" cy="120" r="74" fill="none" stroke="#F8A024" strokeWidth="3.5" strokeLinecap="round" strokeDasharray="90 142.47" className="origin-center animate-[spin_3s_linear_infinite]" />
+                    </svg>
+
+                    {/* Center Logo Node (No white background) */}
                     <div
                       ref={(el) => measureNode(item.id, el)}
-                      className="w-[120px] h-[120px] bg-white rounded-full shadow-[inset_0_-8px_15px_rgba(0,0,0,0.03),0_0_30px_rgba(255,78,39,0.3)] flex items-center justify-center relative z-20 border-[3px] border-white overflow-hidden"
+                      className="w-[90px] h-[90px] flex items-center justify-center relative z-20"
                     >
-                      {/* Glossy moving shine overlay */}
-                      <motion.div
-                        className="absolute top-0 w-[150%] h-full bg-gradient-to-r from-transparent via-white/90 to-transparent -skew-x-[30deg] pointer-events-none z-30"
-                        initial={{ left: "-150%" }}
-                        animate={{ left: "150%" }}
-                        transition={{
-                          duration: 2.5,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          repeatDelay: 1,
-                        }}
-                      />
-
                       {/* Animated Icon (Breathing effect) */}
                       <motion.div
-                        animate={{ scale: [1, 1.08, 1] }}
+                        animate={{ scale: [1, 1.05, 1] }}
                         transition={{
-                          duration: 2.5,
+                          duration: 3,
                           repeat: Infinity,
                           ease: "easeInOut",
                         }}
@@ -518,9 +525,9 @@ const WhatWeDo = () => {
                         <Image
                           src="/faiIcon.png"
                           alt="Logo"
-                          width={100}
-                          height={100}
-                          className="object-contain drop-shadow-md"
+                          width={75}
+                          height={75}
+                          className="object-contain "
                           onError={(e) => {
                             e.target.style.display = "none";
                             e.target.nextSibling.style.display = "flex";

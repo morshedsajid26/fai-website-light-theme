@@ -6,18 +6,61 @@ import InputField from "../InputField";
 import { FaCheck } from "react-icons/fa";
 import Button from "../Button";
 import CustomRadio from "../CustomRadio";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [projectType, setProjectType] = useState("Mobile APP");
-  const [budget, setBudget] = useState("$5K - $10K");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [details, setDetails] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null);
 
-  const budgetOptions = [
-    "Less than $5K",
-    "$5K - $10K",
-    "$10K - $20K",
-    "$20K - $50K",
-    "More than $50K",
-  ];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if (!name || !email || !details) {
+      setMessage({ type: "error", text: "Please fill in all required fields." });
+      return;
+    }
+
+    setLoading(true);
+    setMessage(null);
+
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+      user_phone: phone,
+      project_type: projectType,
+      message: details,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          setLoading(false);
+          setMessage({ type: "success", text: "Message sent successfully!" });
+          setName("");
+          setEmail("");
+          setPhone("");
+          setDetails("");
+          setProjectType("Mobile APP");
+          setTimeout(() => setMessage(null), 5000);
+        },
+        (error) => {
+          setLoading(false);
+          setMessage({ type: "error", text: "Failed to send message. Please try again." });
+          console.error("EmailJS Error:", error);
+        }
+      );
+  };
 
   return (
     <div id="contact" className="py-20">
@@ -72,22 +115,26 @@ const Contact = () => {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
                 viewport={{ once: false, amount: 0.2 }}
               >
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="grid grid-cols-12 gap-y-4 md:gap-y-6 gap-x-4">
                     <InputField
                       label="Full Name"
                       placeholder="Enter your name"
                       className="col-span-12"
                       type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       labelClass="text-[#09090b]"
                       inputClass="bg-white border-zinc-200 focus:border-[#FF4400]/50"
                     />
 
                     <InputField
-                      label="Your Email"
+                      label="Your Email *"
                       placeholder="Enter your email"
                       className="col-span-12 md:col-span-6"
                       type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       labelClass="text-[#09090b]"
                       inputClass="bg-white border-zinc-200 focus:border-[#FF4400]/50"
                     />
@@ -97,39 +144,20 @@ const Contact = () => {
                       placeholder="Enter your phone number"
                       className="col-span-12 md:col-span-6"
                       type="number"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       labelClass="text-[#09090b]"
                       inputClass="bg-white border-zinc-200 focus:border-[#FF4400]/50"
                     />
                   </div>
 
-                  {/* Project Budget Section */}
-                  <div className="mt-8">
-                    <label className="font-space-grotesk font-bold text-lg text-[#09090b] block mb-4">
-                      Project Budget
-                    </label>
-                    <div className="flex flex-wrap gap-3">
-                      {budgetOptions.map((b) => (
-                        <button
-                          key={b}
-                          type="button"
-                          onClick={() => setBudget(b)}
-                          className={`px-5 py-2.5 text-sm md:text-base whitespace-nowrap rounded-[1rem] font-space-grotesk font-medium transition-all duration-300 border select-none ${
-                            budget === b
-                              ? "bg-gradient-to-r from-[#E53022] to-[#F8A024] text-white border-transparent shadow-md scale-[1.02]"
-                              : "bg-white text-zinc-600 border-zinc-200 hover:border-[#FF4400]/40 hover:text-[#FF4400]"
-                          }`}
-                        >
-                          {b}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+
 
                   <div className="my-8">
                     <label className="font-space-grotesk font-bold text-lg text-[#09090b] block mb-4">
                       What do you need help with?
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 gap-x-8">
                       <CustomRadio
                         label="Mobile APP"
                         value="Mobile APP"
@@ -149,11 +177,25 @@ const Contact = () => {
                         onChange={setProjectType}
                       />
                       <CustomRadio
-                        label="WordPress"
-                        value="WordPress"
+                        label="CMS"
+                        value="CMS"
                         selectedValue={projectType}
                         onChange={setProjectType}
                       />
+                       <CustomRadio
+                        label="Software"
+                        value="Software"
+                        selectedValue={projectType}
+                        onChange={setProjectType}
+                      />
+                       <CustomRadio
+                        label="Others"
+                        value="Others"
+                        selectedValue={projectType}
+                        onChange={setProjectType}
+                      />
+                      
+                      
                     </div>
                   </div>
 
@@ -162,17 +204,25 @@ const Contact = () => {
                       htmlFor="project-details"
                       className="font-space-grotesk font-bold text-lg text-[#09090b] block mb-4"
                     >
-                      Project Details
+                      Project Details *
                     </label>
                     <textarea
                       id="project-details"
                       placeholder="Briefly describe your project..."
+                      value={details}
+                      onChange={(e) => setDetails(e.target.value)}
                       className="bg-white w-full p-4 rounded-2xl outline-none border border-zinc-200 text-[#09090b] placeholder:text-zinc-400 font-poppins h-32 resize-none focus:border-[#FF4400]/50 transition-colors"
                     />
                   </div>
 
+                  {message && (
+                    <div className={`mb-6 p-4 rounded-xl text-sm font-poppins font-medium border ${message.type === 'success' ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
+                      {message.text}
+                    </div>
+                  )}
+
                   <div>
-                    <Button buttonText={"Send Message"} />
+                    <Button type="submit" disabled={loading} buttonText={loading ? "Sending..." : "Send Message"} />
                   </div>
                 </form>
               </motion.div>

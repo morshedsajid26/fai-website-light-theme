@@ -1,10 +1,10 @@
 import React from "react";
 
-const Button = ({ buttonText, icon, buttonClass, asDiv = false, onClick }) => {
+const Button = ({ buttonText, icon, buttonClass, asDiv = false, onClick, type = "button", disabled = false }) => {
   const Component = asDiv ? 'div' : 'button';
   
   return (
-    <Component onClick={onClick} className="relative inline-flex overflow-hidden rounded-2xl p-[3px] transition-transform hover:scale-105 active:scale-95 group">
+    <Component type={!asDiv ? type : undefined} disabled={disabled} onClick={onClick} className={`relative inline-flex overflow-hidden rounded-2xl p-[3px] transition-transform ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 active:scale-95'} group`}>
       {/* Rotating Background */}
       <span className="absolute inset-[-1000%] animate-[spin_2.5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e4e4e7_0%,#e4e4e7_80%,#f97316_100%)]" />
 

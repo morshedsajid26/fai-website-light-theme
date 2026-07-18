@@ -68,12 +68,12 @@ const Projects = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={project.id}
-                className="bg-white rounded-[24px] overflow-hidden border border-zinc-200 shadow-sm group"
+                className="bg-white rounded-[24px] overflow-hidden border border-zinc-200 shadow-sm group flex flex-col h-full"
               >
                 <Link
                   // href={`/portfolio/${project.id}`}
                   href={"#"}
-                  className="block w-full h-full cursor-pointer group-hover:border-[#FF4400]/50 transition-colors"
+                  className="flex flex-col w-full h-full cursor-pointer group-hover:border-[#FF4400]/50 transition-colors"
                 >
                   {/* Project Thumbnail */}
                   <div className="relative w-full h-[240px] sm:h-[300px] overflow-hidden">
@@ -86,7 +86,7 @@ const Projects = () => {
                   </div>
 
                   {/* Project Details */}
-                  <div className="p-6 md:p-8">
+                  <div className="p-6 md:p-8 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-[#09090b] mb-2 tracking-wide font-space-grotesk group-hover:text-[#FF4400] transition-colors duration-300">
                       {project.title}
                     </h3>
@@ -95,7 +95,7 @@ const Projects = () => {
                     </p>
 
                     {/* Technology Tags */}
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 mt-auto">
                       {project.tags.map((tag, idx) => (
                         <span
                           key={idx}
