@@ -29,11 +29,11 @@ const Contact = () => {
     setMessage(null);
 
     const templateParams = {
-      user_name: name,
-      user_email: email,
-      user_phone: phone,
-      project_type: projectType,
-      message: details,
+      fullName: name,
+      email: email,
+      phoneNumber: phone,
+      service: projectType,
+      projectDetails: details,
     };
 
     emailjs
