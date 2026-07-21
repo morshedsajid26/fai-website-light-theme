@@ -10,28 +10,35 @@ const teamData = [
     id: 1,
     name: "Shahriar Hossain Jihad",
     designation: "Full Stack Developer (ELF)",
-    image: "/jihad.jpeg",
+    image: "/jihad.jpg",
     quote: "Ensuring flawless content delivery and seamless digital experiences.",
   },
   {
     id: 2,
     name: "Mehedi Hasan Munna",
     designation: "Frontend Developer (ELF)",
-    image: "/munna.png",
+    image: "/munna.jpg",
     quote: "Optimizing visibility and driving organic growth through strategic SEO.",
   },
   {
     id: 3,
     name: "Mrittika",
     designation: "Business Development Executive (ELF)",
-    image: "/Mrittika.png",
+    image: "/mrittika.jpg",
     quote: "Crafting engaging social campaigns that resonate and convert.",
   },
   {
     id: 4,
-    name: "",
-    designation: "",
-    image: "/team4.png",
+    name: "Nirmol Malo",
+    designation: "Sales Executive (ELF)",
+    image: "/nirmol.jpg",
+    quote: "Leading full-stack and mobile development with a focus on seamless user experiences.",
+  },
+   {
+    id: 5,
+    name: "Piqlu Chowdhury",
+    designation: "Sales Executive (ELF)",
+    image: "/piqlu.jpg",
     quote: "Leading full-stack and mobile development with a focus on seamless user experiences.",
   },
 ];
@@ -55,7 +62,7 @@ const Team = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {teamData.map((member, index) => (
             <motion.div
               key={member.id}
