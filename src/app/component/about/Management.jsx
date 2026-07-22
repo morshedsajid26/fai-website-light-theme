@@ -33,11 +33,22 @@ const managementData = [
     name: "Amirul Haque Shuhan",
     title: "Engineering the Future, One Solution at a Time",
     description:
-      "Amirul Haque Shuhan is a strategic leader dedicated to operational excellence and business growth. As Vice President, he oversees key agency initiatives, ensuring that Scaleup Ads Agency continues to deliver high-impact results for clients through innovation and disciplined execution.",
+      "Amirul Haque Shuhan is a strategic leader dedicated to operational excellence and business growth. As Vice President, he oversees key agency initiatives, ensuring that Fire AI Agency continues to deliver high-impact results for clients through innovation and disciplined execution.",
     designation: "VICE PRESIDENT",
     company: "BETOPIA GROUP",
     image: "/VP.png",
     reverse: false,
+  },
+  {
+    id: 4,
+    name: "Mohammad Sanjid Rayhan",
+    title: "Engineering the Future, One Solution at a Time",
+    description:
+      "Mohammad Sanjid Rayhan is a strategic leader dedicated to operational excellence and business growth. As AGM, he oversees key agency initiatives, ensuring that Fire AI Agency continues to deliver high-impact results for clients through innovation and disciplined execution.",
+    designation: "AGM",
+    company: "BETOPIA GROUP",
+    image: "/sanjid.png",
+    reverse: true,
   },
 ];
 

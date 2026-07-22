@@ -10,7 +10,7 @@ const teamData = [
     id: 1,
     name: "Shahriar Hossain Jihad",
     designation: "Full Stack Developer (ELF)",
-    image: "/jihad.jpg",
+    image: "/Jihad.jpg",
     quote: "Ensuring flawless content delivery and seamless digital experiences.",
   },
   {
