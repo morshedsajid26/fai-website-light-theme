@@ -45,8 +45,8 @@ const managementData = [
     title: "Engineering the Future, One Solution at a Time",
     description:
       "Mohammad Sanjid Rayhan is a strategic leader dedicated to operational excellence and business growth. As AGM, he oversees key agency initiatives, ensuring that Fire AI Agency continues to deliver high-impact results for clients through innovation and disciplined execution.",
-    designation: "AGM",
-    company: "BETOPIA GROUP",
+    designation: "Assistant General Manager (AGM)",
+    company: "Fire AI",
     image: "/sanjid.png",
     reverse: true,
   },

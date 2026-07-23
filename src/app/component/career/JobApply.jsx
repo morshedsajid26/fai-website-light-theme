@@ -4,6 +4,7 @@ import Header from "../Header";
 import { FiMapPin, FiBriefcase, FiClock, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "../Container";
+import Link from "next/link";
 
 const jobPostings = [
   {
@@ -31,11 +32,12 @@ const jobPostings = [
       "Experience in B2B sales in the IT/Software industry.",
       "Familiarity with CRM software.",
     ],
+    href:"https://docs.google.com/forms/d/e/1FAIpQLSdC4SYi7Arq2n53M2H6d485I9BrLasq5Irp0JefQBGuwsxb6w/viewform",
   },
   {
     id: 2,
     title: "Google Ads Specialist",
-    location: "Remote",
+    location: "Dhaka",
     type: "Full-time",
     experience: "2+ Years",
     salary: "Negotiable",
@@ -57,6 +59,7 @@ const jobPostings = [
       "Google Ads Certification.",
       "Experience with Meta Ads or other PPC platforms.",
     ],
+    href:"https://docs.google.com/forms/d/e/1FAIpQLSexECYENw8NQBOOQAMY_RYriNg9ZSCu9xqQeoztLq5gP6uBjQ/viewform",
   },
 ];
 
@@ -179,7 +182,7 @@ const JobApply = () => {
                   </span>
                   <span className="text-zinc-300">&bull;</span>
                   <span className="text-emerald-600 font-medium">
-                    $ {selectedJob.salary}
+                    ৳ {selectedJob.salary}
                   </span>
                 </div>
               </div>
@@ -260,9 +263,11 @@ const JobApply = () => {
 
               {/* Action Area */}
               <div className="p-6 md:p-8 pt-0 mt-auto bg-white">
+                <Link href={selectedJob.href || "#"} target="_blank">
                 <button className="w-full py-3.5 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold text-base transition-transform hover:scale-[1.01] active:scale-[0.99] shadow-lg shadow-orange-500/20">
                   Apply for this Position
                 </button>
+                </Link>
                 <p className="text-center text-xs text-zinc-500 mt-4">
                   By applying, you agree to our Candidate Privacy Policy.
                 </p>

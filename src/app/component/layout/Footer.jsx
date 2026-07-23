@@ -87,7 +87,7 @@ const Footer = () => {
                   <div className="flex items-center gap-3">
                     <FaPhone size={14} className="text-[#FF4400] shrink-0" />
                     <p className="text-[#09090b] text-[15px] font-bold font-istok-web">
-                      +1 (123) 456-7890
+                      +880 1335-117990
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -96,7 +96,7 @@ const Footer = () => {
                       className="text-[#FF4400] shrink-0"
                     />
                     <p className="text-[#09090b] text-[15px] font-bold font-istok-web">
-                      support@mail.com
+                      fai.official.25@gmail.com
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
