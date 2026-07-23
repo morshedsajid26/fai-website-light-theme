@@ -10,7 +10,7 @@ const teamData = [
     id: 1,
     name: "Shahriar Hossain Jihad",
     designation: "Assistant Manager Operation (AMO)",
-    image: "/Jihad.jpg",
+    image: "/jihad.jpg",
     quote: "Ensuring flawless content delivery and seamless digital experiences.",
   },
   {
