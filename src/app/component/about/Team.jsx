@@ -11,35 +11,35 @@ const teamData = [
     name: "Shahriar Hossain Jihad",
     designation: "Assistant Manager Operation (AMO)",
     image: "/jihad.jpg",
-    quote: "Ensuring flawless content delivery and seamless digital experiences.",
+    quote: "Streamlining operations and ensuring flawless execution for seamless digital experiences.",
   },
   {
     id: 2,
     name: "Mehedi Hasan Munna",
     designation: "Sr. Executive, Frontend ",
     image: "/munna.jpg",
-    quote: "Optimizing visibility and driving organic growth through strategic SEO.",
+    quote: "Crafting intuitive, pixel-perfect web interfaces to deliver exceptional user experiences.",
   },
   {
     id: 3,
     name: "Samia Halim Mrittika",
     designation: "Sr. Executive, Business Development",
     image: "/mrittika.jpg",
-    quote: "Crafting engaging social campaigns that resonate and convert.",
+    quote: "Driving strategic partnerships and identifying new opportunities for sustainable business growth.",
   },
   {
     id: 4,
     name: "Nirmol Malo",
     designation: "Sr. Executive, Sales",
     image: "/nirmol.jpg",
-    quote: "Leading full-stack and mobile development with a focus on seamless user experiences.",
+    quote: "Building strong client relationships and delivering value-driven solutions for impactful sales.",
   },
    {
     id: 5,
     name: "Piqlu Chowdhury",
-    designation: "Sr, Executive, Sales",
+    designation: "Sr. Executive, Sales",
     image: "/piqlu.jpg",
-    quote: "Leading full-stack and mobile development with a focus on seamless user experiences.",
+    quote: "Connecting clients with the right solutions and maximizing business value through strategic sales.",
   },
 ];
 
@@ -87,16 +87,16 @@ const Team = () => {
                     "{member.quote}"
                   </p>
                   <div className="flex items-center gap-3">
-                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-[#22c55e] hover:border-[#22c55e] transition-colors">
+                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-gradient-to-r from-[#E53022] to-[#F8A024] transition-colors">
                       <FaFacebookF size={12} />
                     </a>
-                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-[#22c55e] hover:border-[#22c55e] transition-colors">
+                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-gradient-to-r from-[#E53022] to-[#F8A024]  transition-colors">
                       <FaLinkedinIn size={12} />
                     </a>
-                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-[#22c55e] hover:border-[#22c55e] transition-colors">
+                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-gradient-to-r from-[#E53022] to-[#F8A024]  transition-colors">
                       <FaTwitter size={12} />
                     </a>
-                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-[#22c55e] hover:border-[#22c55e] transition-colors">
+                    <a href="#" className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-gradient-to-r from-[#E53022] to-[#F8A024]  transition-colors">
                       <FaInstagram size={12} />
                     </a>
                   </div>
