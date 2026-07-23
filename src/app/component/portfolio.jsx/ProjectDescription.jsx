@@ -64,7 +64,7 @@ export default function ProjectDetails(props) {
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6">
               <div className="relative w-full h-[150px] sm:h-[220px] lg:h-[288px] rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 bg-white group">
                 <Image
-                  src="/Ai.png"
+                  src="/AI.png"
                   alt="Gallery Image 1"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
